@@ -26,12 +26,14 @@ p {
 .th1 {
     border: 1px solid black;
 }
-td {
-    border: 1px solid black;
+.td1 {
+    border: 5px solid black;
+
 }
 
 body {
     padding-left: 20px;
+    font-family: Arial, Verdana, sans-serif;
     font-size: 16px;
 }
 table {
@@ -54,7 +56,7 @@ td {
 }
 
 #text-field{
-    border:0px;
+    border:1px;
     /*width:150px;*/
     /*height:500px;*/
     float:left;
@@ -66,4 +68,9 @@ td {
 .java_logo {
     float:left; /* Выравнивание по левому краю */
     margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+}
+
+.copyright {
+    font-size: 12px;
+    color: gray;
 }
