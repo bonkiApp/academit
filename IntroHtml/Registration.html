@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Регистрация нового пользователя</title>
@@ -11,11 +11,11 @@
 
 <h1>Регистрация</h1>
 
-<p>Добро пожаловать на наш ресурс!<br>
-    Заполните форму регистрации (поля со знаком * являются обязательными) и нажмите кнопку "Зарегистрировать".
+<p class="regText">Добро пожаловать на наш ресурс!<br>
+    Заполните форму регистрации (поля со знаком * являются обязательными) и нажмите кнопку "Зарегистрироваться".
 </p>
 <form action="http://www.com" method="post" enctype="multipart/form-data">
-<div id="text-field">
+    <div id="text-field">
 
         <table>
             <tr>
@@ -82,17 +82,18 @@
                 <td><textarea name="comment" id="comment" rows="5"></textarea></td>
             </tr>
         </table>
-<label><input type="checkbox" checked>Обязуюсь соблюдать <a href="/rules">правила данного ресурса</a></label><br>
-<div id="submit"><input type="submit" value="Зарегистрироваться" class="button"></div>
+        <label><input type="checkbox" checked>Обязуюсь соблюдать <a href="/rules">правила данного
+            ресурса</a></label><br>
+        <div id="submit"><input type="submit" value="Зарегистрироваться" class="button"></div>
 
 
-</div>
-<div id="image">
+    </div>
+    <div id="image">
 
         <img src="src/ico.jpg" title="Тут должно быть Ваше фото" alt="Ваше фото"><br>
         <input type="file" name="photo" accept="image/*">
 
-</div>
+    </div>
 
 
 </form>
