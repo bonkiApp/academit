@@ -6,7 +6,6 @@ h1 {
 }
 
 p {
-    /*padding-left: 20px;*/
     padding-right: 20px;
     font-family: Arial, Verdana, sans-serif;
     text-indent: 20px;
@@ -34,7 +33,6 @@ p {
 
 .td1 {
     border: 1px solid black;
-
 }
 
 body {
@@ -56,18 +54,12 @@ td {
     margin-left: 50px;
 }
 
-.nameBlock {
-    margin-top: 10px;
-}
-
 .main-field {
     color: darkred;
 }
 
 #text-field {
     border: 1px;
-    /*width:150px;*/
-    /*height:500px;*/
     float: left;
 }
 
@@ -76,8 +68,8 @@ td {
 }
 
 .java_logo {
-    float: left; /* Выравнивание по левому краю */
-    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+    float: left;
+    margin: 7px 7px 7px 0;
 }
 
 .copyright {
