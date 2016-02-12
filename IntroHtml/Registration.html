@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Регистрация нового пользователя</title>
@@ -14,8 +14,9 @@
 <p>Добро пожаловать на наш ресурс!<br>
     Заполните форму регистрации (поля со знаком * являются обязательными) и нажмите кнопку "Зарегистрировать".
 </p>
-<div id="form">
-    <form action="http://www.com" method="post">
+<form action="http://www.com" method="post" enctype="multipart/form-data">
+<div id="text-field">
+
         <table>
             <tr>
                 <td><label class="main-field" for="login-field">Логин*</label></td>
@@ -48,15 +49,15 @@
             </tr>
             <tr>
                 <td>Пол</td>
-                <td><input type="radio" name="sex" value="male" checked>Мужской<br>
-                    <input type="radio" name="sex" value="female">Женский
+                <td><input type="radio" name="gender" value="male">Мужской<br>
+                    <input type="radio" name="gender" value="female">Женский
                 </td>
             </tr>
             <tr>
                 <td>Образование</td>
                 <td><input type="checkbox" name="secondary" value="1">Среднее<br>
-                <input type="checkbox" name="vocational" value="2">Средне-специальное<br>
-                <input type="checkbox" name="higher" value="3">Высшее<br></td>
+                    <input type="checkbox" name="vocational" value="2">Средне-специальное<br>
+                    <input type="checkbox" name="higher" value="3">Высшее<br></td>
             </tr>
             <tr>
                 <td><label for="country-field"> Страна проживания</label></td>
@@ -67,20 +68,33 @@
                 </select></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td><label for="lang">Владение языками</label></td>
+                <td><select id="lang" multiple>
+                    <option>русский</option>
+                    <option>английский</option>
+                    <option>греческий</option>
+                    <option>китайский</option>
+                    <option>хинди</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="comment">Коротко о себе</label></td>
+                <td><textarea name="comment" id="comment" rows="5"></textarea></td>
             </tr>
         </table>
+<label><input type="checkbox" checked>Обязуюсь соблюдать <a href="/rules">правила данного ресурса</a></label><br>
+<div id="submit"><input type="submit" value="Зарегистрироваться" class="button"></div>
 
 
-    </form>
 </div>
 <div id="image">
-    <form method="post" enctype="multipart/form-data">
+
         <img src="src/ico.jpg" title="Тут должно быть Ваше фото" alt="Ваше фото"><br>
         <input type="file" name="photo" accept="image/*">
-    </form>
+
 </div>
 
+
+</form>
 </body>
 </html>
