@@ -4,10 +4,31 @@ h1 {
     font-family: Arial, Verdana, sans-serif;
     text-align: center;
 }
-P {
+/*p {*/
+    /*padding-left: 20px;*/
+    /*font-family: Arial, Verdana, sans-serif;*/
+/*}*/
+
+body {
     padding-left: 20px;
+    font-size: 16px;
 }
-
 table {
-
+    border-collapse: collapse;
 }
+td {
+    padding-right: 10px;
+}
+.radio {
+    margin-left: 50px;
+}
+
+.nameBlock {
+    margin-top: 10px;
+}
+
+#form{
+    border:0px;
+    /*width:150px;*/
+    height:50px;
+    float:left; }
