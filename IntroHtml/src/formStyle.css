@@ -4,10 +4,13 @@ h1 {
     font-family: Arial, Verdana, sans-serif;
     text-align: center;
 }
-/*p {*/
+p {
     /*padding-left: 20px;*/
-    /*font-family: Arial, Verdana, sans-serif;*/
-/*}*/
+    padding-right: 20px;
+    font-family: Arial, Verdana, sans-serif;
+    text-indent: 20px;
+    text-align: justify;
+}
 #submit {
     text-align: center;
     margin-top: 20px;
@@ -15,6 +18,16 @@ h1 {
 }
 .regText {
     font-size: 18px;
+}
+.tab1 {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.th1 {
+    border: 1px solid black;
+}
+td {
+    border: 1px solid black;
 }
 
 body {
@@ -48,4 +61,9 @@ td {
 }
 #image{
     float: left;
+}
+
+.java_logo {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
 }
