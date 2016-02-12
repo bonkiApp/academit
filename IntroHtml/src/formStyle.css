@@ -18,6 +18,7 @@ table {
 }
 td {
     padding-right: 10px;
+    vertical-align: top;
 }
 .radio {
     margin-left: 50px;
@@ -27,8 +28,16 @@ td {
     margin-top: 10px;
 }
 
+.main-field {
+    color: darkred;
+}
+
 #form{
     border:0px;
     /*width:150px;*/
-    height:50px;
-    float:left; }
+    /*height:500px;*/
+    float:left;
+}
+#image{
+    float: left;
+}
