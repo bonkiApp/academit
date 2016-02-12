@@ -4,6 +4,7 @@ h1 {
     font-family: Arial, Verdana, sans-serif;
     text-align: center;
 }
+
 p {
     /*padding-left: 20px;*/
     padding-right: 20px;
@@ -11,23 +12,28 @@ p {
     text-indent: 20px;
     text-align: justify;
 }
+
 #submit {
     text-align: center;
     margin-top: 20px;
     padding-bottom: 20px;
 }
+
 .regText {
     font-size: 18px;
 }
+
 .tab1 {
     border-collapse: collapse;
     border: 1px solid black;
 }
+
 .th1 {
     border: 1px solid black;
 }
+
 .td1 {
-    border: 5px solid black;
+    border: 1px solid black;
 
 }
 
@@ -36,13 +42,16 @@ body {
     font-family: Arial, Verdana, sans-serif;
     font-size: 16px;
 }
+
 table {
     border-collapse: collapse;
 }
+
 td {
     padding-right: 10px;
     vertical-align: top;
 }
+
 .radio {
     margin-left: 50px;
 }
@@ -55,18 +64,19 @@ td {
     color: darkred;
 }
 
-#text-field{
-    border:1px;
+#text-field {
+    border: 1px;
     /*width:150px;*/
     /*height:500px;*/
-    float:left;
+    float: left;
 }
-#image{
+
+#image {
     float: left;
 }
 
 .java_logo {
-    float:left; /* Выравнивание по левому краю */
+    float: left; /* Выравнивание по левому краю */
     margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
 }
 
