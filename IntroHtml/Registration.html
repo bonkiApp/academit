@@ -11,89 +11,87 @@
 
     <h1>Регистрация</h1>
 
-    <p class="regText">Добро пожаловать на наш ресурс!<br/>
-    Заполните форму регистрации (поля со знаком * являются обязательными) и нажмите кнопку "Зарегистрироваться".
+    <p class="regText">
+        Добро пожаловать на наш ресурс!<br/>
+        Заполните форму регистрации (поля со знаком * являются обязательными) и нажмите кнопку "Зарегистрироваться".
     </p>
     <form action="http://www.com" method="post" enctype="multipart/form-data">
-    <div id="text-field">
+        <div id="text-field">
+            <table>
+                <tr>
+                    <td><label class="main-field" for="login-field">Логин*</label></td>
+                    <td><input type="text" name="login" id="login-field"/></td>
+                </tr>
+                <tr>
+                    <td><label class="main-field" for="passwor-field">Пароль*</label></td>
+                    <td><input type="password" name="password" id="passwor-field"/></td>
+                </tr>
+                <tr>
+                    <td><label class="main-field" for="email-field">E-mail*</label></td>
+                    <td><input type="email" name="email" id="email-field"/></td>
+                </tr>
+                <tr>
+                    <td><label for="surname-field">Фамилия</label></td>
+                    <td><input type="text" name="surname" id="surname-field"/></td>
+                </tr>
+                <tr>
+                    <td><label for="name-field">Имя</label></td>
+                    <td><input type="text" name="name" id="name-field"/></td>
+                </tr>
+                <tr>
+                    <td><label for="patronymic-field">Отчество</label></td>
+                    <td><input type="text" name="patronymic" id="patronymic-field"/></td>
+                </tr>
+                <tr>
+                    <td><label for="bday-field">Дата рождения</label></td>
+                    <td><input type="date" name="bday" id="bday-field"/></td>
+                </tr>
+                <tr>
+                    <td>Пол</td>
+                    <td><input type="radio" name="gender" value="male"/>Мужской<br/>
+                        <input type="radio" name="gender" value="female"/>Женский
+                    </td>
+                </tr>
+                <tr>
+                    <td>Образование</td>
+                    <td><input type="checkbox" name="secondary" value="1"/>Среднее<br/>
+                        <input type="checkbox" name="vocational" value="2"/>Средне-специальное<br/>
+                        <input type="checkbox" name="higher" value="3"/>Высшее<br/></td>
+                </tr>
+                <tr>
+                    <td><label for="country-field"> Страна проживания</label></td>
+                    <td><select name="country" id="country-field">
+                        <option selected>Россия</option>
+                        <option>Люксембург</option>
+                        <option>Индия</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="lang">Владение языками</label></td>
+                    <td><select id="lang" multiple>
+                        <option>русский</option>
+                        <option>английский</option>
+                        <option>греческий</option>
+                        <option>китайский</option>
+                        <option>хинди</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="comment">Коротко о себе</label></td>
+                    <td><textarea name="comment" id="comment" rows="5"></textarea></td>
+                </tr>
+            </table>
 
-        <table>
-            <tr>
-                <td><label class="main-field" for="login-field">Логин*</label></td>
-                <td><input type="text" name="login" id="login-field"/></td>
+            <label><input type="checkbox" checked/>Обязуюсь соблюдать <a href="rules.html">правила данного
+                ресурса</a></label><br/>
 
-            </tr>
-            <tr>
-                <td><label class="main-field" for="passwor-field">Пароль*</label></td>
-                <td><input type="password" name="password" id="passwor-field"/></td>
-            </tr>
-            <tr>
-                <td><label class="main-field" for="email-field">E-mail*</label></td>
-                <td><input type="email" name="email" id="email-field"/></td>
-            </tr>
-            <tr>
-                <td><label for="surname-field">Фамилия</label></td>
-                <td><input type="text" name="surname" id="surname-field"/></td>
-            </tr>
-            <tr>
-                <td><label for="name-field">Имя</label></td>
-                <td><input type="text" name="name" id="name-field"/></td>
-            </tr>
-            <tr>
-                <td><label for="patronymic-field">Отчество</label></td>
-                <td><input type="text" name="patronymic" id="patronymic-field"/></td>
-            </tr>
-            <tr>
-                <td><label for="bday-field">Дата рождения</label></td>
-                <td><input type="date" name="bday" id="bday-field"/></td>
-            </tr>
-            <tr>
-                <td>Пол</td>
-                <td><input type="radio" name="gender" value="male"/>Мужской<br/>
-                    <input type="radio" name="gender" value="female"/>Женский
-                </td>
-            </tr>
-            <tr>
-                <td>Образование</td>
-                <td><input type="checkbox" name="secondary" value="1"/>Среднее<br/>
-                    <input type="checkbox" name="vocational" value="2"/>Средне-специальное<br/>
-                    <input type="checkbox" name="higher" value="3"/>Высшее<br/></td>
-            </tr>
-            <tr>
-                <td><label for="country-field"> Страна проживания</label></td>
-                <td><select name="country" id="country-field">
-                    <option selected>Россия</option>
-                    <option>Люксембург</option>
-                    <option>Индия</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td><label for="lang">Владение языками</label></td>
-                <td><select id="lang" multiple>
-                    <option>русский</option>
-                    <option>английский</option>
-                    <option>греческий</option>
-                    <option>китайский</option>
-                    <option>хинди</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td><label for="comment">Коротко о себе</label></td>
-                <td><textarea name="comment" id="comment" rows="5"></textarea></td>
-            </tr>
-        </table>
+            <div id="submit"><input type="submit" value="Зарегистрироваться" class="button"/></div>
+        </div>
 
-        <label><input type="checkbox" checked/>Обязуюсь соблюдать <a href="rules.html">правила данного
-            ресурса</a></label><br/>
-
-        <div id="submit"><input type="submit" value="Зарегистрироваться" class="button"/></div>
-
-    </div>
-    <div id="image">
-        <img src="src/ico.jpg" title="Тут должно быть Ваше фото" alt="Ваше фото"/><br/>
-        <input type="file" name="photo" accept="image/*"/>
-    </div>
-
+        <div id="image">
+            <img src="src/ico.jpg" title="Тут должно быть Ваше фото" alt="Ваше фото"/><br/>
+            <input type="file" name="photo" accept="image/*"/>
+        </div>
     </form>
 </body>
 </html>

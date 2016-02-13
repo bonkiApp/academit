@@ -50,6 +50,10 @@ td {
     vertical-align: top;
 }
 
+.quote {
+    font-style: italic;
+}
+
 .radio {
     margin-left: 50px;
 }
