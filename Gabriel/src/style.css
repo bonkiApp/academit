@@ -12,6 +12,19 @@
     /*border-left: 1px solid black;*/
     margin-top: 10px;
 }
+
+.main_table {
+    /*table-layout: fixed;*/
+    border: 2px solid white;
+    border-collapse: collapse;
+    width: 100%;
+}
 .main_table td {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+}
+
+.last_orders {
+    border: 2px solid white;
+    border-collapse: collapse;
+    width: 100%;
 }
