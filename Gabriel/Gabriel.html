@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Gabriel</title>
+    <link href="src/style.css" rel="stylesheet">
 </head>
 <body>
 
-    <table>
+    <table class="head_table">
         <tr>
             <td>
                 Gabriel
@@ -32,7 +33,7 @@
         </tr>
     </table>
 
-    <table>
+    <table class="main_table">
         <tr>
             <td>
                 Валидатор
@@ -69,12 +70,15 @@
             <td>
                 10
             </td>
-            <td>
-                <input type="range" min="0" max="800" step="10" value="200" id="slider1">
-            </td>
-            <td>
+
+            <td><form onsubmit="return false" oninput="et1.value=level1.valueAsNumber">
+                <input type="range" min="0" max="1000" step="10" value="200" id="slider1" name="level1">
+            <!--</td>-->
+            <!--<td>-->
                 <output for="slider1" name="et1">200</output>
+            </form>
             </td>
+
             <td>
                 Какой-то комментарий
             </td>
