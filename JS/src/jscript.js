@@ -30,29 +30,29 @@ function Equation2() {
     var Discriminant;
 
     if (a === 0 && b === 0) {
-        alert("Уравнение не является квадратным и корней не имеет.");
+        console.log("Уравнение не является квадратным и корней не имеет.");
     } else if (a !== 0) {
         Discriminant = b * b - 4 * a * c;
         if (Discriminant === 0) {
             x1 = x2 = (-b) / (2 * a);
-            alert("Уравнение имеет два одинаковых корня:\nx1 = " + x1.toFixed(2) + "\nx2 = " + x2.toFixed(2));
+            console.log("Уравнение имеет два одинаковых корня:\nx1 = " + x1.toFixed(2) + "\nx2 = " + x2.toFixed(2));
         } else if (Discriminant > 0) {
             x1 = (-b + Math.sqrt(Discriminant)) / (2 * a);
             x2 = (-b - Math.sqrt(Discriminant)) / (2 * a);
-            alert("Уравнение имеет два корня:\nx1 = " + x1.toFixed(2) + "\nx2 = " + x2.toFixed(2));
+            console.log("Уравнение имеет два корня:\nx1 = " + x1.toFixed(2) + "\nx2 = " + x2.toFixed(2));
         } else {
-            alert("Уравнение имеет два мнимых корня:\n\
+            console.log("Уравнение имеет два мнимых корня:\n\
             x1= (" + -b + "+i*" + Math.sqrt(Math.abs(Discriminant)).toFixed(2) + ")" + "/" + (2 * a) + "\n\
             x2= (" + -b + "-i*" + Math.sqrt(Math.abs(Discriminant)).toFixed(2) + ")" + "/" + (2 * a));
         }
     } else {
         x1 = -c / b;
-        alert("Уравнение не является квадратным т.к. а = 0\nx = " + x1);
+        console.log("Уравнение не является квадратным т.к. а = 0\nx = " + x1);
     }
 }
 
 
 function ShowList() {
     var Discriminant = prompt("Введите число", '');
-    alert(Math.sqrt(Math.abs(Discriminant)));
+    console.log(Math.sqrt(Math.abs(Discriminant)));
 }
