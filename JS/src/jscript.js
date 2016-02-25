@@ -9,25 +9,50 @@ function Strings() {
 }
 
 
-function Equation2(){
+function Equation2() {
     do {
-        var index1 = prompt("Введите первое число - коэффициент a:", '');
-        index1 = parseFloat(index1, 10);
-    } while (isNaN(index1));
-
-    do {
-        var index2 = prompt("Введите второе число - коэффициент b:", '');
-        index2 = parseFloat(index2, 10);
-    } while (isNaN(index2));
+        var a = prompt("Введите первое число - коэффициент a:", '');
+        a = parseFloat(a, 10);
+    } while (isNaN(a));
 
     do {
-        var index3 = prompt("Введите третье число - коэффициент c:", '');
-        index3 = parseFloat(index3, 10);
-    } while (isNaN(index3));
+        var b = prompt("Введите второе число - коэффициент b:", '');
+        b = parseFloat(b, 10);
+    } while (isNaN(b));
+
+    do {
+        var c = prompt("Введите третье число - коэффициент c:", '');
+        c = parseFloat(c, 10);
+    } while (isNaN(c));
+
+    var x1;
+    var x2;
+    var Discriminant;
+
+    if (a === 0 && b === 0) {
+        alert("Уравнение не является квадратным и корней не имеет.");
+    } else if (a !== 0) {
+        Discriminant = b * b - 4 * a * c;
+        if (Discriminant === 0) {
+            x1 = x2 = (-b) / (2 * a);
+            alert("Уравнение имеет два одинаковых корня:\nx1 = " + x1.toFixed(2) + "\nx2 = " + x2.toFixed(2));
+        } else if (Discriminant > 0) {
+            x1 = (-b + Math.sqrt(Discriminant)) / (2 * a);
+            x2 = (-b - Math.sqrt(Discriminant)) / (2 * a);
+            alert("Уравнение имеет два корня:\nx1 = " + x1.toFixed(2) + "\nx2 = " + x2.toFixed(2));
+        } else {
+            alert("Уравнение имеет два мнимых корня:\n\
+            x1= (" + -b + "+i*" + Math.sqrt(Math.abs(Discriminant)).toFixed(2) + ")" + "/" + (2 * a) + "\n\
+            x2= (" + -b + "-i*" + Math.sqrt(Math.abs(Discriminant)).toFixed(2) + ")" + "/" + (2 * a));
+        }
+    } else {
+        x1 = -c / b;
+        alert("Уравнение не является квадратным т.к. а = 0\nx = " + x1);
+    }
+}
 
 
-
-
-
-
+function ShowList() {
+    var Discriminant = prompt("Введите число", '');
+    alert(Math.sqrt(Math.abs(Discriminant)));
 }
