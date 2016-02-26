@@ -53,6 +53,9 @@ function Equation2() {
 
 
 function ShowList() {
-    var Discriminant = prompt("Введите число", '');
-    console.log(Math.sqrt(Math.abs(Discriminant)));
-}
+    var list = [];
+    for (var length = 1; length < 100; length++) {
+        list.push(length);
+
+    }
+} console.log(list.join(", "))
