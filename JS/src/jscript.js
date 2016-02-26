@@ -59,19 +59,18 @@ function ShowList() {
 
     }
     list.sort(SortNumber);
-    console.log(list);
+    console.log("Список отсортирован по убыванию\n" + list);
 
     var foo = 5;
-
     var list1 = list.slice(0, foo);
-    console.log(list1);
+    console.log("Подсписок 1\n" + list1);
+    var list2 = list.slice(list.length - foo, list.length);
+    console.log("Подсписок 2\n" + list2);
 
-    var list2 = list.slice(list.length - 5, list.length);
-    console.log(list2);
 
 
 }
 
-function SortNumber(e1, e2){
+function SortNumber(e1, e2) {
     return e2 - e1;
 }
