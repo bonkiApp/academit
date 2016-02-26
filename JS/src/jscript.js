@@ -56,18 +56,22 @@ function ShowList() {
     var list = [];
     for (var length = 1; length <= 100; length++) {
         list.push(length);
-
     }
     list.sort(SortNumber);
-    console.log("Список отсортирован по убыванию\n" + list);
+    console.log("Список отсортирован по убыванию:\n" + list);
 
     var foo = 5;
     var list1 = list.slice(0, foo);
-    console.log("Подсписок 1\n" + list1);
+    console.log("Подсписок 1:\n" + list1);
     var list2 = list.slice(list.length - foo, list.length);
-    console.log("Подсписок 2\n" + list2);
+    console.log("Подсписок 2:\n" + list2);
 
-
+    var evenSum = 0;
+    for (var i = 0; i <= list.length; i++){
+        if (list[i]%2 === 0) {
+            evenSum = evenSum + list[i];
+        }
+    } console.log("Сумма нечетных чисел:\n" + evenSum);
 
 }
 
