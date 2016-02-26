@@ -67,11 +67,12 @@ function ShowList() {
     console.log("Подсписок 2:\n" + list2);
 
     var evenSum = 0;
-    for (var i = 0; i <= list.length; i++){
-        if (list[i]%2 === 0) {
+    for (var i = 0; i <= list.length; i++) {
+        if (list[i] % 2 === 0) {
             evenSum = evenSum + list[i];
         }
-    } console.log("Сумма нечетных чисел:\n" + evenSum);
+    }
+    console.log("Сумма нечетных чисел:\n" + evenSum);
 
 }
 
