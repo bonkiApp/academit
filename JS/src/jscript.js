@@ -12,17 +12,17 @@ function Strings() {
 function Equation2() {
     do {
         var a = prompt("Введите первое число - коэффициент a:", '');
-        a = parseFloat(a, 10);
+        a = parseFloat(a);
     } while (isNaN(a));
 
     do {
         var b = prompt("Введите второе число - коэффициент b:", '');
-        b = parseFloat(b, 10);
+        b = parseFloat(b);
     } while (isNaN(b));
 
     do {
         var c = prompt("Введите третье число - коэффициент c:", '');
-        c = parseFloat(c, 10);
+        c = parseFloat(c);
     } while (isNaN(c));
 
     var x1;
@@ -54,8 +54,24 @@ function Equation2() {
 
 function ShowList() {
     var list = [];
-    for (var length = 1; length < 100; length++) {
+    for (var length = 1; length <= 100; length++) {
         list.push(length);
 
     }
-} console.log(list.join(", "))
+    list.sort(SortNumber);
+    console.log(list);
+
+    var foo = 5;
+
+    var list1 = list.slice(0, foo);
+    console.log(list1);
+
+    var list2 = list.slice(list.length - 5, list.length);
+    console.log(list2);
+
+
+}
+
+function SortNumber(e1, e2){
+    return e2 - e1;
+}
