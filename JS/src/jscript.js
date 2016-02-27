@@ -8,29 +8,17 @@ function strings() {
 
 
 function equation2() {
-    do {
-        var a = prompt("Введите первое число - коэффициент a:", '');
-        a = parseFloat(a);
-    } while (isNaN(a));
-
-    do {
-        var b = prompt("Введите второе число - коэффициент b:", '');
-        b = parseFloat(b);
-    } while (isNaN(b));
-
-    do {
-        var c = prompt("Введите третье число - коэффициент c:", '');
-        c = parseFloat(c);
-    } while (isNaN(c));
+    var a = enterIndex("первое", "a");
+    var b = enterIndex("второе", "b");
+    var c = enterIndex("третье", "c");
 
     var x1;
     var x2;
-    var Discriminant;
 
     if (a === 0 && b === 0) {
         console.log("Уравнение не является квадратным и корней не имеет.");
     } else if (a !== 0) {
-        Discriminant = b * b - 4 * a * c;
+        var Discriminant = b * b - 4 * a * c;
         if (Discriminant === 0) {
             x1 = x2 = (-b) / (2 * a);
             console.log("Уравнение имеет два одинаковых корня:\nx1 = " + x1.toFixed(2) + "\nx2 = " + x2.toFixed(2));
@@ -49,13 +37,20 @@ function equation2() {
     }
 }
 
+function enterIndex(number, letter) {
+    do {
+        var index = prompt("Введите " + number + " число - коэффициент " + letter, '');
+        index = parseFloat(index);
+    } while (isNaN(index));
+    return index;
+}
 
 function showList() {
     var list = [];
     for (var length = 1; length <= 100; length++) {
         list.push(length);
     }
-    list.sort(SortNumber);
+    list.sort(sortNumber);
     console.log("Список отсортирован по убыванию:\n" + list);
 
     var foo = 5;
