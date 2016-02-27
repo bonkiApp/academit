@@ -18,22 +18,22 @@ function equation2() {
     if (a === 0 && b === 0) {
         console.log("Уравнение не является квадратным и корней не имеет.");
     } else if (a !== 0) {
-        var Discriminant = b * b - 4 * a * c;
-        if (Discriminant === 0) {
+        var discriminant = b * b - 4 * a * c;
+        if (discriminant === 0) {
             x1 = x2 = (-b) / (2 * a);
             console.log("Уравнение имеет два одинаковых корня:");
             console.log("x1 = " + x1.toFixed(2));
             console.log("x2 = " + x2.toFixed(2));
-        } else if (Discriminant > 0) {
-            x1 = (-b + Math.sqrt(Discriminant)) / (2 * a);
-            x2 = (-b - Math.sqrt(Discriminant)) / (2 * a);
+        } else if (discriminant > 0) {
+            x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
             console.log("Уравнение имеет два корня:");
             console.log("x1 = " + x1.toFixed(2));
             console.log("x2 = " + x2.toFixed(2));
         } else {
             console.log("Уравнение имеет два мнимых корня:");
-            console.log("x1= (" + -b + "+i*" + Math.sqrt(Math.abs(Discriminant)).toFixed(2) + ")" + "/" + (2 * a));
-            console.log("x2= (" + -b + "-i*" + Math.sqrt(Math.abs(Discriminant)).toFixed(2) + ")" + "/" + (2 * a));
+            console.log("x1= (" + -b + "+i*" + Math.sqrt(Math.abs(discriminant)).toFixed(2) + ")" + "/" + (2 * a));
+            console.log("x2= (" + -b + "-i*" + Math.sqrt(Math.abs(discriminant)).toFixed(2) + ")" + "/" + (2 * a));
         }
     } else {
         x1 = -c / b;
@@ -43,8 +43,9 @@ function equation2() {
 }
 
 function enterIndex(number, letter) {
+    var index;
     do {
-        var index = prompt("Введите " + number + " число - коэффициент " + letter, '');
+        index = prompt("Введите " + number + " число - коэффициент " + letter, '');
         index = parseFloat(index);
     } while (isNaN(index));
     return index;
@@ -55,7 +56,10 @@ function showList() {
     for (var i = 1; i <= 100; i++) {
         list.push(i);
     }
-    list.sort(sortNumber);
+
+    list.sort(function (e1, e2) {
+        return e2 - e1;
+    });
     console.log("Список отсортирован по убыванию:\n" + list);
 
     var sublistSize = 5;
@@ -71,10 +75,6 @@ function showList() {
         }
     }
     console.log("Сумма четных чисел:\n" + evenSum);
-
 }
 
-function sortNumber(e1, e2) {
-    return e2 - e1;
-}
 

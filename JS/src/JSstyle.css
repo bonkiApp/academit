@@ -6,6 +6,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
 .list {
     font-weight: bold;
 }
