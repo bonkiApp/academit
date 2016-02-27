@@ -1,15 +1,13 @@
-function Strings() {
-    var foo = "";
-    var bar = "";
+function strings() {
+    var result = "";
     for (var x = 1; x <= 10; x++) {
-        foo = "Строка " + x + "\n";
-        bar = bar + foo;
+        result = result + "Строка " + x + "\n";
     }
-    alert(bar);
+    alert(result);
 }
 
 
-function Equation2() {
+function equation2() {
     do {
         var a = prompt("Введите первое число - коэффициент a:", '');
         a = parseFloat(a);
@@ -52,7 +50,7 @@ function Equation2() {
 }
 
 
-function ShowList() {
+function showList() {
     var list = [];
     for (var length = 1; length <= 100; length++) {
         list.push(length);
@@ -76,6 +74,6 @@ function ShowList() {
 
 }
 
-function SortNumber(e1, e2) {
+function sortNumber(e1, e2) {
     return e2 - e1;
 }
