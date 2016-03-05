@@ -1,0 +1,78 @@
+table {
+    border-collapse: collapse;
+
+    font-family: Calibri, Arial;
+    font-size: 16px;
+}
+
+.contact_table {
+    /*float: left;*/
+    /*display: block;*/
+}
+
+.table_head th{
+    border: 2px solid #fbcb09;
+    padding: 5px 10px 5px 10px;
+    background-color: #333333;
+    color: #fbcb09;
+    font-size: 18px;
+    text-align: center;
+}
+
+.first_row td{
+    /*height: 30px;*/
+    background-color: #ffffff;
+    border: 2px solid #fbcb09;
+    color: #000000;
+}
+
+.filter_button {
+    margin: 10px 0 0 10px;
+    width: 100px;
+    height: 32px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.filter {
+    /*float: left;*/
+    /*display: block;*/
+
+}
+
+.text_input {
+    height: 26px;
+    margin: 10px 0 10px 0;
+
+}
+
+.chek_all {
+    width: 10px;
+}
+
+.row_number {
+    width: 30px;
+    text-align: center;
+}
+
+.second_name {
+    width: 200px;
+}
+
+.name {
+    width: 150px;
+}
+
+.phone_number {
+    width: 200px;
+}
+
+.first_row .delete_row {
+    width: 30px;
+    text-align: center;
+    color: red;
+}
+
+td {
+    padding: 5px;
+}
