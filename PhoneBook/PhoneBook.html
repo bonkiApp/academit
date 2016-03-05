@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Телефонная книга</title>
+    <link href="src/style.css" rel="stylesheet">
+    <script src="src/jquery-1.12.1.js"></script>
+    <script src="src/script.js"></script>
+</head>
+<body>
+    <div class="filter">
+        <input class="text_input" type="text" size="40" placeholder="Критерий фильтрации">
+        <input type="button" class="use_filter filter_button" value="Фильтровать">
+        <input type="button" class="clear_filter filter_button" value="Очистить">
+    </div>
+
+    <div class="contact_table">
+        <table>
+            <tr class="table_head">
+                <th class="chek_all">
+
+                </th>
+                <th class="row_number">
+                    №
+                </th>
+                <th class="second_name">
+                    Фамилия
+                </th>
+                <th class="name">
+                    Имя
+                </th>
+                <th class="phone_number">
+                    Номер телефона
+                </th>
+                <th class="delete_row">
+
+                </th>
+            </tr>
+            <tr class="first_row">
+                <td>
+                    <input type="checkbox" class="chek_one">
+                </td>
+                <td class="row_number">
+1
+                </td>
+                <td class="second_name">
+Тепин
+                </td>
+                <td class="name">
+Вася
+                </td>
+                <td class="phone_number">
+03
+                </td>
+                <td class="delete_row">
+X
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="data_form">
+
+    </div>
+</body>
+</html>
