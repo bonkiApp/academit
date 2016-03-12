@@ -11,7 +11,6 @@ var persons = [
     {age: 18, name: 'Светозара', lastName: 'Добролюбова'}
 ];
 
-
 var sum = _.reduce(persons, function (memo, value) {
     return memo + value.age;
 }, 0);
@@ -21,11 +20,9 @@ var averAge = sum / persons.length;
 console.log('Средний возраст: ' + averAge);
 
 
-filterByAge = function (value) {
+var filterAge = _.filter(persons, function (value) {
     return value.age >= 20 && value.age <= 30;
-};
-
-var filterAge = _.filter(persons, filterByAge);
+});
 
 
 console.log(_.sortBy(filterAge, function (value) {
@@ -34,7 +31,6 @@ console.log(_.sortBy(filterAge, function (value) {
 
 
 _.each(persons, function(value){
-    console.log(
-        value.fullName = value.lastName + ' ' + value.name
-    );
+    var fullNameList = value.fullName = value.lastName + ' ' + value.name;
+    console.log(fullNameList);
 });
