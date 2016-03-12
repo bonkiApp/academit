@@ -20,14 +20,21 @@ var averAge = sum / persons.length;
 console.log('Средний возраст: ' + averAge);
 
 
-var filterAge = _.filter(persons, function (value) {
-    return value.age >= 20 && value.age <= 30;
-});
+var filterSortAge = _.chain(persons)
+    .filter(function(value) { return value.age >= 20 && value.age <= 30; })
+    .sortBy('age')
+    .pluck('name')
+    .value();
+console.log(filterSortAge);
+
+//var filterAge = _.filter(persons, function (value) {
+//    return value.age >= 20 && value.age <= 30;
+//});
 
 
-console.log(_.sortBy(filterAge, function (value) {
-    return value.age;
-}));
+//console.log(_.sortBy(filterAge, function (value) {
+//    return value.age;
+//}));
 
 
 _.each(persons, function(value){
