@@ -21,14 +21,16 @@ console.log('Средний возраст: ' + averAge);
 
 
 var filterSortAge = _.chain(persons)
-    .filter(function(value) { return value.age >= 20 && value.age <= 30; })
+    .filter(function (value) {
+        return value.age >= 20 && value.age <= 30;
+    })
     .sortBy('age')
     .pluck('name')
     .value();
 console.log('В возрасте от 20 до 30: ' + filterSortAge);
 
 
-_.each(persons, function(value){
-    var fullNameList = value.fullName = value.lastName + ' ' + value.name;
-    console.log(fullNameList);
+_.each(persons, function (value) {
+    value.fullName = value.lastName + ' ' + value.name;
 });
+console.log(persons);
