@@ -25,7 +25,7 @@ var filterSortAge = _.chain(persons)
     .sortBy('age')
     .pluck('name')
     .value();
-console.log(filterSortAge);
+console.log('В возрасте от 20 до 30: ' + filterSortAge);
 
 //var filterAge = _.filter(persons, function (value) {
 //    return value.age >= 20 && value.age <= 30;
