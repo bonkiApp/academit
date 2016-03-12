@@ -27,15 +27,6 @@ var filterSortAge = _.chain(persons)
     .value();
 console.log('В возрасте от 20 до 30: ' + filterSortAge);
 
-//var filterAge = _.filter(persons, function (value) {
-//    return value.age >= 20 && value.age <= 30;
-//});
-
-
-//console.log(_.sortBy(filterAge, function (value) {
-//    return value.age;
-//}));
-
 
 _.each(persons, function(value){
     var fullNameList = value.fullName = value.lastName + ' ' + value.name;
