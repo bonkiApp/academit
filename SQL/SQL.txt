@@ -1,0 +1,26 @@
+USE world;
+
+SELECT name, district
+FROM city;
+
+SELECT name
+FROM city
+WHERE countrycode = 'rus'
+ORDER BY name;
+
+SELECT name
+FROM city
+WHERE countrycode IN ('esp','prt','grc')
+ORDER BY countrycode, name DESC;
+
+SELECT name
+FROM city
+WHERE population BETWEEN 300000 AND 500000;
+
+SELECT name
+FROM city
+WHERE name LIKE ('A%');
+
+SELECT name
+FROM city
+WHERE name LIKE ('%A%');
