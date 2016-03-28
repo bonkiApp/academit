@@ -1,0 +1,16 @@
+USE world;
+
+SELECT DISTINCT continent
+FROM country
+WHERE surfacearea >= 9500000;
+
+SELECT name
+FROM country
+ORDER BY surfacearea DESC
+LIMIT 0,5;
+
+SELECT name
+FROM country
+ORDER BY surfacearea DESC
+LIMIT 5,5;
+
