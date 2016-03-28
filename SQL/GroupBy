@@ -7,10 +7,13 @@ WHERE surfacearea >= 9500000;
 SELECT name
 FROM country
 ORDER BY surfacearea DESC
-LIMIT 0,5;
+LIMIT 0, 5;
 
 SELECT name
 FROM country
 ORDER BY surfacearea DESC
-LIMIT 5,5;
+LIMIT 5, 5;
 
+SELECT c.code, c.name AS country, city.name AS capital
+FROM country AS c INNER JOIN city
+ON c.capital = city.id;
