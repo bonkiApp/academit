@@ -1,3 +1,11 @@
+USE world;
+
+SELECT c.code, c.name AS country, city.name AS capital
+FROM country AS c INNER JOIN city
+ON c.capital = city.id
+ORDER BY code;
+
+-------------------------------------------------
 CREATE DATABASE customerbd;
 
 USE customerbd;
