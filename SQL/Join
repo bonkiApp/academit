@@ -6,27 +6,27 @@ CREATE TABLE client
 (id INT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR (255) NOT NULL);
 
-INSERT INTO customer (name)
+INSERT INTO client (name)
 VALUES ('Пендальф Серый'), ('Фёдор Сумкин'), ('Сеня Лютый'), ('Гиви Зурабович'), ('Агроном Сын Агронома'), ('Лагаваз Безотцовщина'), ('Баролгин Гондураский');
 
-CREATE TABLE order
+CREATE TABLE orders
 (order_num INT AUTO_INCREMENT PRIMARY KEY,
 dates DATE NOT NULL,
 client_id INT NOT NULL,
 summ INT NOT NULL,
 FOREIGN KEY (client_id) REFERENCES client(id));
 
-INSERT INTO order(dates, client_id, summ)
+INSERT INTO orders(dates, client_id, summ)
 VALUES ('2016/01/10', 1, '500000'), ('2016/01/12',3, '158000'),
 ('2016/02/03', 4, '62500'), ('2016/02/27', 6, '30000'),
 ('2016/03/05', 1, '680000'), ('2016/03/18', 4, '99990'),
-('2016/03/25', 3, '121500'), ('2016/03/29', 1, '33000'),
+('2016/03/25', 3, '121500'), ('2016/03/29', 2, '33000'),
 ('2016/03/30', 6, '154000'), ('2016/04/10', 7, '14000'),
 ('2016/04/15', 7, '52500'), ('2016/04/16', 6, '154000'),
 ('2016/04/19', 6, '154000'), ('2016/04/20', 4, '465100');
 
-SELECT name, COUNT(summ) AS order
-FROM clients AS c LEFT JOIN order AS o
+SELECT name, COUNT(summ) AS orders
+FROM client AS c LEFT JOIN orders AS o
 ON c.id = o.client_id
 WHERE summ >=0 OR summ IS NULL
 GROUP BY name
