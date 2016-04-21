@@ -1,0 +1,6 @@
+DROP DATABASE university;
+
+CREATE DATABASE university;
+
+USE university;
+
