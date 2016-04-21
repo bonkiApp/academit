@@ -10,7 +10,7 @@ ed_form VARCHAR (30) NOT NULL);
 
 CREATE TABLE group
 (gr_id INT AUTO_INCREMENT PRIMARY KEY,
-gr_numb VARCHAR (10) NOT NULL
+gr_numb VARCHAR (10) NOT NULL,
 educ_form INT NOT NULL,
 FOREIGN KEY (ed_form) REFERENCES educat_form(form_id));
 
@@ -18,7 +18,7 @@ CREATE TABLE student
 (id INT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR (50) NOT NULL,
 middlename VARCHAR (50),
-lastname VARCHAR (50), #фамилия необязательна, т.к. в судебной практике есть преценденты разрешения получения паспорта человеком с одним лишь именем
+lastname VARCHAR (50), #фамилия необязательна, т.к. в судебной практике РФ есть преценденты разрешения получения паспорта человеком с одним лишь именем
 enroll_year YEAR NOT NULL,
 group_num INT NOT NULL,
 FOREIGN KEY (group_num) REFERENCES group(gr_id));
