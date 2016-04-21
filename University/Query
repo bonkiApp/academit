@@ -8,11 +8,17 @@ CREATE TABLE educat_form
 (form_id INT AUTO_INCREMENT PRIMARY KEY,
 ed_form VARCHAR (30) NOT NULL);
 
+CREATE TABLE profession
+(pr_id INT AUTO_INCREMENT PRIMARY KEY,
+prof VARCHAR (255) NOT NULL);
+
 CREATE TABLE group
 (gr_id INT AUTO_INCREMENT PRIMARY KEY,
 gr_numb VARCHAR (10) NOT NULL,
 educ_form INT NOT NULL,
-FOREIGN KEY (ed_form) REFERENCES educat_form(form_id));
+prof INT NOT NULL,
+FOREIGN KEY (ed_form) REFERENCES educat_form(form_id),
+FOREIGN KEY (prof) REFERENCES profession(pr_id));
 
 CREATE TABLE student
 (id INT AUTO_INCREMENT PRIMARY KEY,
