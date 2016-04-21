@@ -36,6 +36,5 @@ VALUES ('2016/01/10', 1, '500000'), ('2016/01/12',3, '158000'),
 SELECT name, COUNT(summ) AS orders
 FROM client AS c LEFT JOIN orders AS o
 ON c.id = o.client_id
-WHERE summ >=0 OR summ IS NULL
-GROUP BY name
-ORDER BY id;
+GROUP BY id
+ORDER BY COUNT(*) DESC;
