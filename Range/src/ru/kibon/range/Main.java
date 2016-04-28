@@ -34,6 +34,9 @@ public class Main {
             String joinR = newRange.joinRanges(newFrom, newTo, newFrom1, newTo1);
             System.out.println(joinR);
 
+            String subR = newRange.subtractRanges(newFrom, newTo, newFrom1, newTo1);
+            System.out.println(subR);
+
         } catch (InputMismatchException e) {
             System.out.println("Вы ввели не число, начните заново.");
         }
