@@ -36,18 +36,31 @@ public class Range {
 
     double x1;
     double x2;
-    public double crossingRanges(double from, double to, double from1, double to1){
-        if ((Math.abs(from1) > Math.abs(from) && Math.abs(from1) < Math.abs(to)) && ((Math.abs(to) > Math.abs(from1)) && (Math.abs(to) < Math.abs(to1))) ){
+    public String crossingRanges(double from, double to, double from1, double to1){
+        if (from == from1 || to == to1){
+            return "Диапазоны совпадают";
+        }
+        else if ((from < from1 && from1 < to) && (from1 < to && to < to1)){
             x1 = from1;
             x2 = to;
         }
-        if ((Math.abs(to1) > Math.abs(from) && Math.abs(to1) < Math.abs(to)) && ((Math.abs(from) > Math.abs(from1)) && (Math.abs(from) < Math.abs(to1))) ){
+        else if ((from1 < from && from < to1) && (from < to1 && to1 < to)){
             x1 = from;
             x2 = to1;
         }
+        else if ((from1 < from && from < to1) && (from1 < to && to < to1)){
+            x1 = from;
+            x2 = to;
+        }
+        else if ((from < from1 && from1 < to) && (from < to1 && to1 < to)){
+            x1 = from1;
+            x2 = to1;
+        }
+        else {
+            return String.format("NULL");
+        }
 
-        System.out.printf("Диапазон пересечения: %f%f", x1, x2 );
-       return ;
+       return String.format("Диапазон пересечения: %f%f", x1, x2 );
     }
 }
 
