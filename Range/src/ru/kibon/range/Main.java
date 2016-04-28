@@ -23,6 +23,9 @@ public class Main {
             double range = newRange.findRange(newFrom, newTo);
             System.out.printf("Длина диапазона %f", range);
 
+            String cross = newRange.crossingRanges(-5,1,0,3);
+            System.out.printf(cross);
+
         } catch (InputMismatchException e) {
             System.out.println("Вы ввели не число, начните заново.");
         }
