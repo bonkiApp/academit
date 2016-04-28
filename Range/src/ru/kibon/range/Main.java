@@ -21,9 +21,14 @@ public class Main {
             System.out.printf("Ваше число%s входит в заданный диапазон.\n", answer);
 
             double range = newRange.findRange(newFrom, newTo);
-            System.out.printf("Длина диапазона %f", range);
+            System.out.printf("Длина диапазона %f\n", range);
 
-            String cross = newRange.crossingRanges(-5,1,0,3);
+            System.out.println("Введите первое число другого диапазона:");
+            double newFrom1 = scanner.nextDouble();
+            System.out.println("Введите второе число другого диапазона:");
+            double newTo1 = scanner.nextDouble();
+
+            String cross = newRange.crossingRanges(newFrom, newTo, newFrom1, newTo1);
             System.out.printf(cross);
 
         } catch (InputMismatchException e) {
