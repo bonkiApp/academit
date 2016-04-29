@@ -1,19 +1,20 @@
 public class MyMain {
     public static void main(String[] args) {
-        MyRange range1 = new MyRange(-10.5, 25.1);
+        MyRange range1 = new MyRange(-5.78, 42.99);
         double number = 11.4;
 
-        String answer = (MyRange.isInside(number)) ? "" : " не";
+        String answer = (range1.isInside(number)) ? "" : " не";
         System.out.printf("Ваше число%s входит в заданный интервал.%n", answer);
 
-        double range = MyRange.findRange(range1);
+        double range = range1.findRange(range1);
         System.out.printf("Длина интервала %f%n", range);
 
-        MyRange range2 = new MyRange(-5.78, 42.99); //(-5.78, 42.99)
+        MyRange range2 = new MyRange(-10.5, 25.1); //(-5.78, 42.99)
+//
+        MyRange crossR = range1.crossingRanges(range2);
+        System.out.printf("Интервал пересения: %s", crossR);
 
-//        MyRange crossR = range1.crossingRanges(range2);
-//        System.out.printf("Интервал пересения: %s", crossR);
+//        System.out.println(range1.printRange(range2));
 
-        System.out.println(range1.printRange(range1));
     }
 }
