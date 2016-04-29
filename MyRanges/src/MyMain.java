@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyMain {
     public static void main(String[] args) {
         MyRange range1 = new MyRange(-5.78, 14.99);
@@ -16,6 +18,10 @@ public class MyMain {
 
         MyRange joinR = range1.joinRanges(range2);
         System.out.printf("Интервал объединения: %s%n", range1.printRange(joinR));
+
+        MyRange subR[] = range1.subtractRanges(range2);
+        System.out.printf("Разность интервалов: %s", Arrays.deepToString(subR));
+
 
 //        System.out.println(range1.printRange(crossR));
 
