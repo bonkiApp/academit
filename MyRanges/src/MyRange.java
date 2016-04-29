@@ -1,6 +1,6 @@
 public class MyRange {
-    private static double from;
-    private static double to;
+    private double from;
+    private double to;
 
     public MyRange(double from, double to) {
         this.from = from;
@@ -23,39 +23,40 @@ public class MyRange {
         this.to = to;
     }
 
-    public static boolean isInside(double number) {
-        return (number >= from && number <= to);
+    public boolean isInside(double number) {
+        return (number >= this.from && number <= this.to);
     }
 
-    public static double findRange(MyRange range) {
+    public double findRange(MyRange range) {
         double rangeLength = Math.abs(to - from);
         return rangeLength;
     }
 
-//    public MyRange crossingRanges(MyRange range2) {
-//        double x1;
-//        double x2;
-//        if (this.from == range2.from || this.to == range2.to) {
-//            return ((this.from, this.to));
-//        }
-//        else if ((from < from1 && from1 < to) && (from1 < to && to < to1)) {
-//            x1 = from1;
-//            x2 = to;
-//        } else if ((from1 < from && from < to1) && (from < to1 && to1 < to)) {
-//            x1 = from;
-//            x2 = to1;
-//        } else if ((from1 < from && from < to1) && (from1 < to && to < to1)) {
-//            x1 = from;
-//            x2 = to;
-//        } else if ((from < from1 && from1 < to) && (from < to1 && to1 < to)) {
-//            x1 = from1;
-//            x2 = to1;
-//        } else {
-//            return String.format("NULL");
-//        }
+    public MyRange crossingRanges(MyRange range2) {
+        double x1;
+        double x2;
+        MyRange cross;
+        if (this.from == range2.from || this.to == range2.to) {
+            return (this);
+        }
+        else if ((this.from < from && from < this.to) && (from < this.to && this.to < to)) {
+            x1 = from;
+            x2 = this.to;
+        } else if ((from < this.from && this.from < to) && (this.from < to && to < this.to)) {
+            x1 = this.from;
+            x2 = to;
+        } else if ((from < this.from && this.from < to) && (from < this.to && this.to < to)) {
+            x1 = this.from;
+            x2 = this.to;
+        } else if ((this.from < from && from < this.to) && (this.from < to && to < this.to)) {
+            x1 = from;
+            x2 = to;
+        } else {
+            return null;
+        }
 //        return (this);
-//        return String.format("Интервал пересечения: (%f, %f)", x1, x2);
-//    }
+        return cross = new MyRange(x1, x2);
+    }
 
 //    public MyRange joinRanges(MyRange range2) {
 //        double y1;
@@ -65,7 +66,9 @@ public class MyRange {
 //        return String.format("Интервал объединения: (%f, %f)", y1, y2);
 //    }
 
-    public String printRange (MyRange range){
+    public String printRange(MyRange range) {
         return String.format("(%f, %f)", range.from, range.to);
     }
+
+
 }
