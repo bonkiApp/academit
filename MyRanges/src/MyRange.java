@@ -35,39 +35,40 @@ public class MyRange {
     public MyRange crossingRanges(MyRange range2) {
         double x1;
         double x2;
-        MyRange cross;
         if (this.from == range2.from || this.to == range2.to) {
             return (this);
         }
-        else if ((this.from < from && from < this.to) && (from < this.to && this.to < to)) {
-            x1 = from;
+        else if ((this.from < range2.from && range2.from < this.to) && (range2.from < this.to && this.to < range2.to)) {
+            x1 = range2.from;
             x2 = this.to;
-        } else if ((from < this.from && this.from < to) && (this.from < to && to < this.to)) {
+        } else if ((range2.from < this.from && this.from < range2.to) && (this.from < range2.to && range2.to < this.to)) {
             x1 = this.from;
-            x2 = to;
-        } else if ((from < this.from && this.from < to) && (from < this.to && this.to < to)) {
+            x2 = range2.to;
+        } else if ((range2.from < this.from && this.from < range2.to) && (range2.from < this.to && this.to < range2.to)) {
             x1 = this.from;
             x2 = this.to;
-        } else if ((this.from < from && from < this.to) && (this.from < to && to < this.to)) {
-            x1 = from;
-            x2 = to;
+        } else if ((this.from < range2.from && range2.from < this.to) && (this.from < range2.to && range2.to < this.to)) {
+            x1 = range2.from;
+            x2 = range2.to;
         } else {
             return null;
         }
-//        return (this);
-        return cross = new MyRange(x1, x2);
+        return  new MyRange(x1, x2);
     }
 
-//    public MyRange joinRanges(MyRange range2) {
-//        double y1;
-//        double y2;
-//        y1 = (this.from < from) ? this.from : from;
-//        y2 = (this.to > to) ? this.to : to;
-//        return String.format("Интервал объединения: (%f, %f)", y1, y2);
-//    }
+    public MyRange joinRanges(MyRange range2) {
+        double y1;
+        double y2;
+        y1 = (this.from < range2.from) ? this.from : range2.from;
+        y2 = (this.to > range2.to) ? this.to : range2.to;
+        return new MyRange(y1, y2);
+    }
 
     public String printRange(MyRange range) {
-        return String.format("(%f, %f)", range.from, range.to);
+        if (range != null) {
+            return String.format("(%f, %f)", range.from, range.to);
+        } else return null;
+
     }
 
 
