@@ -32,13 +32,14 @@ public class MyRange {
         return rangeLength;
     }
 
+    MyRange cross; //нужен чтобы запомнить - пересечение интервалов есть
+
     public MyRange crossingRanges(MyRange range2) {
         double x1;
         double x2;
         if (this.from == range2.from || this.to == range2.to) {
             return (this);
-        }
-        else if ((this.from < range2.from && range2.from < this.to) && (range2.from < this.to && this.to < range2.to)) {
+        } else if ((this.from < range2.from && range2.from < this.to) && (range2.from < this.to && this.to < range2.to)) {
             x1 = range2.from;
             x2 = this.to;
         } else if ((range2.from < this.from && this.from < range2.to) && (this.from < range2.to && range2.to < this.to)) {
@@ -53,7 +54,7 @@ public class MyRange {
         } else {
             return null;
         }
-        return  new MyRange(x1, x2);
+        return cross = new MyRange(x1, x2);
     }
 
     public MyRange joinRanges(MyRange range2) {
@@ -62,6 +63,27 @@ public class MyRange {
         y1 = (this.from < range2.from) ? this.from : range2.from;
         y2 = (this.to > range2.to) ? this.to : range2.to;
         return new MyRange(y1, y2);
+    }
+
+    public MyRange[] subtractRanges(MyRange range2) {
+        if (cross != null) {
+            if ((this.from != range2.from) && (this.to != range2.to)) {
+                MyRange newRange1;
+                MyRange newRange2;
+                if (this.from < range2.from) {
+                    newRange1 = new MyRange(this.from, range2.from);
+                } else {
+                    newRange1 = new MyRange(range2.from, this.from);
+                }
+                if (this.to < range2.to) {
+                    newRange2 = new MyRange(this.to, range2.to);
+                } else {
+                    newRange2 = new MyRange(range2.to, this.to);
+                }
+                MyRange arrRanges[] = new MyRange[] {newRange1, newRange2};
+                return arrRanges;
+            }
+        } return null;
     }
 
     public String printRange(MyRange range) {
