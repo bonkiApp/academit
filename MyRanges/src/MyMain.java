@@ -9,8 +9,11 @@ public class MyMain {
         double range = MyRange.findRange(range1);
         System.out.printf("Длина интервала %f%n", range);
 
-        MyRange range2 = new MyRange(-5.78, 42.99);
+        MyRange range2 = new MyRange(-5.78, 42.99); //(-5.78, 42.99)
 
+//        MyRange crossR = range1.crossingRanges(range2);
+//        System.out.printf("Интервал пересения: %s", crossR);
 
+        System.out.println(range1.printRange(range1));
     }
 }
