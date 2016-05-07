@@ -6,6 +6,9 @@ public class Triangle implements Shape {
     double y2;
     double x3;
     double y3;
+    double width;
+    double height;
+    double S;
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         this.x1 = x1;
@@ -16,56 +19,39 @@ public class Triangle implements Shape {
         this.y3 = y3;
     }
 
-
     @Override
     public double getWidth() {
-        return 0;
+        width = maximum(x1, x2, x3) - minimum(x1, x2, x3);
+        return width;
     }
 
     @Override
     public double getHeight() {
-        return 0;
+        height = maximum(y1, y2, y3) - minimum(y1, y2, y3);
+        return height;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        S = Math.sqrt(Math.pow(((x3-x1)*(y2-y1)-(x2-x1)*(y3-y1)),2))/2;
+        return S;
     }
 
     public double maximum(double a, double b, double c) {
         double max;
-        double min;
         if (a > b) {
             max = a;
-            min = b;
             if (c > max) {
                 max = c;
-                return max;
-                if (min < c) {
-                    return min;
-                } else {
-                    min = c;
-                    return min;
-                }
-            } else {
-                return max;
             }
         } else {
-            max = b;
-            min = a;
-            if (max > c) {
-                return max;
-                if (min < c){
-                    return min;
-                }else {
-                    min = c;
-                    return min;
-                }
+            if (b > c) {
+                max = b;
             } else {
                 max = c;
-                return max;
             }
         }
+        return max;
     }
 
     public double minimum(double a, double b, double c) {
@@ -74,19 +60,16 @@ public class Triangle implements Shape {
             min = a;
             if (c < min) {
                 min = c;
-                return min;
-            } else {
-                return min;
             }
+            return min;
         } else {
-            min = b;
-            if (min < c) {
-                return min;
+            if (b < c) {
+                min = b;
             } else {
                 min = c;
-                return min;
             }
         }
+        return min;
     }
 
 }
