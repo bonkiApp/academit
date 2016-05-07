@@ -1,5 +1,5 @@
 
-public class Square implements Shape{
+public class Square implements Shape {
     double width;
 
     public Square(double width) {
@@ -18,6 +18,6 @@ public class Square implements Shape{
 
     @Override
     public double getArea() {
-        return (width*width);
+        return (width * width);
     }
 }

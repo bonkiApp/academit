@@ -33,7 +33,7 @@ public class Triangle implements Shape {
 
     @Override
     public double getArea() {
-        S = Math.sqrt(Math.pow(((x3-x1)*(y2-y1)-(x2-x1)*(y3-y1)),2))/2;
+        S = Math.sqrt(Math.pow(((x3 - x1) * (y2 - y1) - (x2 - x1) * (y3 - y1)), 2)) / 2;
         return S;
     }
 

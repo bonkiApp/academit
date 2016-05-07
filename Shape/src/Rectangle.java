@@ -1,5 +1,5 @@
 
-public class Rectangle implements Shape{
+public class Rectangle implements Shape {
     double width;
     double height;
 
@@ -20,6 +20,6 @@ public class Rectangle implements Shape{
 
     @Override
     public double getArea() {
-        return (width*height);
+        return (width * height);
     }
 }

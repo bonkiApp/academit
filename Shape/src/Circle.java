@@ -1,5 +1,5 @@
 
-public class Circle implements Shape{
+public class Circle implements Shape {
     double r;
 
     public Circle(double r) {
@@ -18,6 +18,6 @@ public class Circle implements Shape{
 
     @Override
     public double getArea() {
-        return (Math.PI*r*r);
+        return (Math.PI * r * r);
     }
 }
