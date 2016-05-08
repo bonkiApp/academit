@@ -63,9 +63,23 @@ public class MyRange {
     }
 
     public MyRange[] subtractRanges(MyRange range2) {
-if (range2.from >= this.to || this.from >= range2.to) {
-    return new MyRange(this.from, this.to);
-}
+        MyRange newRange1;
+        MyRange newRange2;
+        if (range2.from >= this.to || this.from >= range2.to) {
+            MyRange arrRanges[] = new MyRange[]{this};
+            return arrRanges;
+        } else if (range2.from > this.from && range2.from < this.to) {
+            newRange1 = new MyRange(this.from, range2.from);
+            if (range2.to < this.to) {
+                newRange2 = new MyRange(range2.to, this.to);
+            }
+            MyRange arrRanges[] = new MyRange[]{newRange1, newRange2};
+            return arrRanges[];
+        } else if (range2.to > this.from && range2.to < this.to) {
+            newRange1 = new MyRange(this.from, range2.to);
+            MyRange arrRanges[] = new MyRange[]{newRange1};
+            return arrRanges;
+        }
     }
 
     public String printRange(MyRange range) {
