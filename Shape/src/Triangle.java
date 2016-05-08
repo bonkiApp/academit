@@ -1,14 +1,14 @@
 // S круга = pi*r*r
 public class Triangle implements Shape {
-    double x1;
-    double y1;
-    double x2;
-    double y2;
-    double x3;
-    double y3;
-    double width;
-    double height;
-    double S;
+    private double x1;
+    private double y1;
+    private double x2;
+    private double y2;
+    private double x3;
+    private double y3;
+    private double width;
+    private double height;
+    private double S;
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         this.x1 = x1;

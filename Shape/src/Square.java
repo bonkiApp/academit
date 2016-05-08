@@ -1,6 +1,6 @@
 
 public class Square implements Shape {
-    double width;
+    private double width;
 
     public Square(double width) {
         this.width = width;
