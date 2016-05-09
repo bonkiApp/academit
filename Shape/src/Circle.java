@@ -1,23 +1,23 @@
 
 public class Circle implements Shape {
-    private double r;
+    private double radius;
 
-    public Circle(double r) {
-        this.r = r;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     @Override
     public double getWidth() {
-        return r;
+        return radius * 2;
     }
 
     @Override
     public double getHeight() {
-        return r;
+        return radius * 2;
     }
 
     @Override
     public double getArea() {
-        return (Math.PI * r * r);
+        return (Math.PI * radius * radius);
     }
 }
