@@ -6,9 +6,6 @@ public class Triangle implements Shape {
     private double y2;
     private double x3;
     private double y3;
-    private double width;
-    private double height;
-    private double S;
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         this.x1 = x1;
@@ -21,23 +18,20 @@ public class Triangle implements Shape {
 
     @Override
     public double getWidth() {
-        width = maximum(x1, x2, x3) - minimum(x1, x2, x3);
-        return width;
+        return (maximum(x1, x2, x3) - minimum(x1, x2, x3));
     }
 
     @Override
     public double getHeight() {
-        height = maximum(y1, y2, y3) - minimum(y1, y2, y3);
-        return height;
+        return (maximum(y1, y2, y3) - minimum(y1, y2, y3));
     }
 
     @Override
     public double getArea() {
-        S = Math.sqrt(Math.pow(((x3 - x1) * (y2 - y1) - (x2 - x1) * (y3 - y1)), 2)) / 2;
-        return S;
+        return (Math.abs((x3 - x1) * (y2 - y1) - (x2 - x1) * (y3 - y1))/ 2);
     }
 
-    public double maximum(double a, double b, double c) {
+    private static double maximum(double a, double b, double c) {
         double max;
         if (a > b) {
             max = a;
@@ -54,7 +48,7 @@ public class Triangle implements Shape {
         return max;
     }
 
-    public double minimum(double a, double b, double c) {
+    private static double minimum(double a, double b, double c) {
         double min;
         if (a < b) {
             min = a;
