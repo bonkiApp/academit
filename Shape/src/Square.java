@@ -13,6 +13,7 @@ public class Square implements Shape {
 
     @Override
     public double getHeight() {
+        //noinspection SuspiciousNameCombination
         return width;
     }
 
