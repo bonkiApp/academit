@@ -28,8 +28,7 @@ public class MyRange {
     }
 
     public double findRange(MyRange range) {
-        double rangeLength = Math.abs(to - from);
-        return rangeLength;
+        return (Math.abs(range.to - range.from));
     }
 
 
@@ -63,31 +62,32 @@ public class MyRange {
     }
 
     public MyRange[] subtractRanges(MyRange range2) {
-        MyRange newRange1;
-        MyRange newRange2;
+        MyRange newRange1 = null;
+        MyRange newRange2 = null;
         if (range2.from >= this.to || this.from >= range2.to) {
-            MyRange arrRanges[] = new MyRange[]{this};
-            return arrRanges;
-        } else if (range2.from > this.from && range2.from < this.to) {
-            newRange1 = new MyRange(this.from, range2.from);
+            return new MyRange[]{this};
+        } else {
+            if (range2.from > this.from) {
+                newRange1 = new MyRange(this.from, range2.from);
+            }
             if (range2.to < this.to) {
                 newRange2 = new MyRange(range2.to, this.to);
             }
-            MyRange arrRanges[] = new MyRange[]{newRange1, newRange2};
-            return arrRanges[];
-        } else if (range2.to > this.from && range2.to < this.to) {
-            newRange1 = new MyRange(this.from, range2.to);
-            MyRange arrRanges[] = new MyRange[]{newRange1};
-            return arrRanges;
+            return new MyRange[]{newRange1, newRange2};
         }
     }
+
 
     public String printRange(MyRange range) {
         if (range != null) {
             return String.format("(%f, %f)", range.from, range.to);
         } else return null;
-
     }
 
+//    public String printArrRange(MyRange[] {MyRange range, MyRange range2}) {
+//        if (range != null) {
+//            return String.format("(%f, %f)", range.from, range.to);
+//        } else return null;
+//    }
 
 }
