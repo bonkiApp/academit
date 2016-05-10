@@ -8,6 +8,8 @@ public class Main {
 
         System.out.println(distanse);
 
+        System.out.println(point1.toString());
+
     }
 
 }
