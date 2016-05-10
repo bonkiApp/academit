@@ -1,0 +1,20 @@
+{
+  "name": "PhoneBook_NEW",
+  "description": "New version of PhoneBook with Knockout and Bootstrap.",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "bonki"
+  ],
+  "license": "MIT",
+  "homepage": "",
+   "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
