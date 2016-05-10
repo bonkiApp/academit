@@ -27,5 +27,9 @@ public class Point {
         double d = Math.sqrt(Math.pow((this.x-point2.x),2)+Math.pow((this.y-point2.y),2));
         return d;
     }
+    @Override
+    public String toString() {
+        return String.format("(%f, %f)", x, y);
+    }
 
 }
