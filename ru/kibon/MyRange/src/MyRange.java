@@ -1,3 +1,4 @@
+
 public class MyRange {
     private double from;
     private double to;
@@ -30,6 +31,7 @@ public class MyRange {
     public double findRange(MyRange range) {
         return (Math.abs(range.to - range.from));
     }
+
 
 
     public MyRange crossingRanges(MyRange range2) {
