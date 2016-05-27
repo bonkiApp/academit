@@ -28,42 +28,20 @@ public class Triangle implements Shape {
 
     @Override
     public double getArea() {
-        return (Math.abs((x3 - x1) * (y2 - y1) - (x2 - x1) * (y3 - y1))/ 2);
+        return (Math.abs((x3 - x1) * (y2 - y1) - (x2 - x1) * (y3 - y1)) / 2);
     }
 
     private static double maximum(double a, double b, double c) {
         double max;
-        if (a > b) {
-            max = a;
-            if (c > max) {
-                max = c;
-            }
-        } else {
-            if (b > c) {
-                max = b;
-            } else {
-                max = c;
-            }
-        }
+        max = Math.max(a, b);
+        max = Math.max(max, c);
         return max;
     }
 
     private static double minimum(double a, double b, double c) {
         double min;
-        if (a < b) {
-            min = a;
-            if (c < min) {
-                min = c;
-            }
-            return min;
-        } else {
-            if (b < c) {
-                min = b;
-            } else {
-                min = c;
-            }
-        }
+        min = Math.min(a, b);
+        min = Math.min(min, c);
         return min;
     }
-
 }
