@@ -32,15 +32,14 @@ public class Triangle implements Shape {
     }
 
     private static double maximum(double a, double b, double c) {
-        double max;
-        max = Math.max(a, b);
+        double max = Math.max(a, b);
         max = Math.max(max, c);
         return max;
     }
 
     private static double minimum(double a, double b, double c) {
-        double min;
-        min = Math.min(Math.min(a, b), c);
+        double min = Math.min(a, b);
+        min = Math.min(min, c);
         return min;
     }
 }
