@@ -40,8 +40,7 @@ public class Triangle implements Shape {
 
     private static double minimum(double a, double b, double c) {
         double min;
-        min = Math.min(a, b);
-        min = Math.min(min, c);
+        min = Math.min(Math.min(a, b), c);
         return min;
     }
 }
