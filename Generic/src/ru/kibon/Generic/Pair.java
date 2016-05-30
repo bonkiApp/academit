@@ -1,4 +1,4 @@
-package ru.kibon.Generic;
+package ru.kibon.generic;
 
 public class Pair<K, V> {
     private K first;

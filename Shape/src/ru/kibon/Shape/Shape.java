@@ -1,4 +1,4 @@
-package ru.kibon.Shape;
+package ru.kibon.shape;
 
 public interface Shape {
     double getWidth();

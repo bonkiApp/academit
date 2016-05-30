@@ -1,4 +1,4 @@
-package ru.kibon.Shape;
+package ru.kibon.shape;
 
 public class Triangle implements Shape {
     private double x1;
