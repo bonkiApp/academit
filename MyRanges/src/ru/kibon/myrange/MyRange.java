@@ -54,7 +54,9 @@ public class MyRange {
         } else if (this.from >= range2.from && range2.to >= this.to) {
             x1 = this.from;
             x2 = this.to;
-        } else return null;
+        } else {
+            return null;
+        }
         return new MyRange(x1, x2);
     }
 
