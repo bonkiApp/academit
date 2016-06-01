@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ba4ac7e-8c08-495f-ae2e-7c90f46eef61" name="Default" comment="0">
+    <list default="true" id="9ba4ac7e-8c08-495f-ae2e-7c90f46eef61" name="Default" comment="еще исправления">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generic/src/ru/kibon/Generic/Main.java" afterPath="$PROJECT_DIR$/Generic/src/ru/kibon/Generic/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generic/src/ru/kibon/Generic/Util.java" afterPath="$PROJECT_DIR$/Generic/src/ru/kibon/Generic/Util.java" />
@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/Generic/src/ru/kibon/generic/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,8 +50,8 @@
       <file leaf-file-name="Util.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Generic/src/ru/kibon/generic/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27055702">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.4960212">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,8 +70,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Generic/src/ru/kibon/generic/Main.java" />
         <option value="$PROJECT_DIR$/Generic/src/ru/kibon/generic/Util.java" />
+        <option value="$PROJECT_DIR$/Generic/src/ru/kibon/generic/Main.java" />
       </list>
     </option>
   </component>
@@ -623,7 +623,7 @@
       <updated>1464629484640</updated>
       <workItem from="1464629494703" duration="3343000" />
       <workItem from="1464707839359" duration="5026000" />
-      <workItem from="1464795473187" duration="1893000" />
+      <workItem from="1464795473187" duration="3348000" />
     </task>
     <task id="LOCAL-00001" summary="0">
       <created>1464633312531</created>
@@ -649,11 +649,17 @@
       <option name="project" value="LOCAL" />
       <updated>1464797181921</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="исправления">
+      <created>1464797413046</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1464797413046</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10262000" />
+    <option name="totallyTimeSpent" value="11717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1368" height="746" extended-state="0" />
@@ -722,7 +728,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0" />
     <MESSAGE value="исправления" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправления" />
+    <MESSAGE value="еще исправления" />
+    <option name="LAST_COMMIT_MESSAGE" value="еще исправления" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -803,15 +810,15 @@
     <entry file="file://$PROJECT_DIR$/Generic/src/ru/kibon/generic/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Generic/src/ru/kibon/generic/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27055702">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.4960212">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
