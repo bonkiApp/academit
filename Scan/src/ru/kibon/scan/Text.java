@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Text {
     public static void main(String[] args) throws FileNotFoundException {
-        try (Scanner scanner = new Scanner(new FileInputStream("Scan/src/text.txt"))) {
+        try (Scanner scanner = new Scanner(new FileInputStream("Scan/src/textRead.txt"))) {
             ArrayList<String> list = new ArrayList<>();
             while (scanner.hasNext()) {
                 String line = scanner.nextLine();
