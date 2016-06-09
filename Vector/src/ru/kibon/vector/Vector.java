@@ -1,5 +1,8 @@
 package ru.kibon.vector;
 
+
+import java.util.Arrays;
+
 public class Vector {
     private double[] component;
 
@@ -8,6 +11,7 @@ public class Vector {
             throw new IllegalArgumentException("Размерность не может быть <= 0");
         }
         this.component = new double[dimention];
+        Arrays.fill(this.component, 0.0);
     }
 //
 //    public Vector(Vector vector) {
@@ -20,8 +24,18 @@ public class Vector {
 //    }
 
 
-    public double getSize1() {
-        return 1;
-    }
+//    public double getSize1() {
+//        return 1;
+//    }
+//
+//}
 
+public String toString(Vector vector){
+//    return vector.component[i];
+    String vect=null;
+     for(double t: vector.component) {
+         vect = vect + ", " + t;
+     }
+    return vect;
+}
 }
