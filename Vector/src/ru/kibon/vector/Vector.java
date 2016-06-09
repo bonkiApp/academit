@@ -1,15 +1,19 @@
 package ru.kibon.vector;
 
 public class Vector {
-    double n;
+    private double[] component;
 
-    public Vector(double n) {
-        this.n = n;
+    public Vector(int dimention) {
+        if (dimention <= 0) {
+            throw new IllegalArgumentException("Размерность не может быть <= 0");
+        }
+        this.component = new double[dimention];
     }
-
-    public Vector(Vector vector) {
-        new Vector(this);
-    }
+//
+//    public Vector(Vector vector) {
+//
+//        this(vector.n);
+//    }
 
 //    public Vector(double n, double[]) {
 //
