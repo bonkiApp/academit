@@ -5,5 +5,8 @@ public class Main {
         Vector vector = new Vector(10);
         System.out.println(vector.toString(vector));
 
+//        Vector newVector = new Vector(vector);
+//        System.out.println(newVector);
+
     }
 }
