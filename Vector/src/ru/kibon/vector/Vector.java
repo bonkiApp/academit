@@ -1,14 +1,10 @@
 package ru.kibon.vector;
 
-
 import java.util.Arrays;
 
 public class Vector {
     private double[] component;
-
-
     private int dimention;
-
 
     public Vector(int dimention) {
         if (dimention <= 0) {
@@ -31,13 +27,12 @@ public class Vector {
     }
 
     public String toString(Vector vector) {
-//    return vector.component[i];
-        String vect = "{";
-        for (double t : vector.component) {
-            vect = vect + ", " + t;
+        String vect = "";
+        for (double el : vector.component) {
+            vect = vect + ", " + el;
         }
-        vect = vect + "}";
-        return vect;
+        vect = vect.substring(2, vect.length());
+        return "{ " + vect + " }";
     }
 
 
