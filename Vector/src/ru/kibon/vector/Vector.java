@@ -6,6 +6,10 @@ import java.util.Arrays;
 public class Vector {
     private double[] component;
 
+
+    private int dimention;
+
+
     public Vector(int dimention) {
         if (dimention <= 0) {
             throw new IllegalArgumentException("Размерность не может быть <= 0");
@@ -13,11 +17,29 @@ public class Vector {
         this.component = new double[dimention];
         Arrays.fill(this.component, 0.0);
     }
-//
-//    public Vector(Vector vector) {
-//
-//        this(vector.n);
-//    }
+
+    public Vector(Vector anyVector) {
+        this(anyVector.getDimention());
+    }
+
+    public int getDimention() {
+        return dimention;
+    }
+
+    public void setDimention(int dimention) {
+        this.dimention = dimention;
+    }
+
+    public String toString(Vector vector) {
+//    return vector.component[i];
+        String vect = "{";
+        for (double t : vector.component) {
+            vect = vect + ", " + t;
+        }
+        vect = vect + "}";
+        return vect;
+    }
+
 
 //    public Vector(double n, double[]) {
 //
@@ -29,13 +51,4 @@ public class Vector {
 //    }
 //
 //}
-
-public String toString(Vector vector){
-//    return vector.component[i];
-    String vect=null;
-     for(double t: vector.component) {
-         vect = vect + ", " + t;
-     }
-    return vect;
-}
 }
