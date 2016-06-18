@@ -35,17 +35,11 @@ public class Vector implements Cloneable {
         }
     }
 
-
-//        for (int i=0; i < components.length; i++){
-//            this.components[i] = components[i];
-//        }
-
     public int getDimention() {
         return dimention;
     }
 
     public void setDimention(int dimention) {
-
         this.dimention = dimention;
     }
 
@@ -58,15 +52,52 @@ public class Vector implements Cloneable {
         return "{ " + vect + " }";
     }
 
+    public int getSize() {
+        return this.components.length;
+    }
 
-//    public Vector(double n, double[]) {
-//
-//    }
+    public double sumVectors() {
+        return 0;
+    }
 
+    public double subtractVectors() {
+        return 0;
+    }
 
-//    public double getSize1() {
-//        return 1;
-//    }
-//
-//}
+    public double multipleVectors() {
+        return 0;
+    }
+
+    public double reversVector() {
+        return 0;
+    }
+
+    public double calcLength() {
+        return 0;
+    }
+
+    public double getComponent() {
+        return 0;
+    }
+
+    public double setComponent() {
+        return 0;
+    }
+
+    public boolean equals() {
+        return true;
+    }
+
+    public static double foldVectors() {
+        return 0;
+    }
+
+    public static double subsVectors() {
+        return 0;
+    }
+
+    public static double scalarMultiplyVectors() {
+        return 0;
+    }
+
 }
