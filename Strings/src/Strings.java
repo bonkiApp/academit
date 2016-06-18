@@ -17,7 +17,7 @@ public class Strings {
         for (String s: parts){
             sum+=Integer.parseInt(s);
         }
-        System.out.println(parts.toString());
+        System.out.println(parts[2]);
         System.out.println(sum);
 
 //    int[] numbers = Integer.parseInt(string);
