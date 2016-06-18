@@ -15,12 +15,22 @@ public class Vector implements Cloneable{
     }
 
     public Vector(Vector anyVector) {
-
         this.components = new double[anyVector.components.length];
     }
 
-    public int getDimention() {
+    public Vector(int dimention, double[] components){
+        this.components = new double[dimention];
+        for (int i=0; i < components.length; i++){
+            this.components[i] = components[i];
+        }
+        if (components.length < dimention){
+            for (int i = components.length; i < dimention; i++){
+                this.components [i] = 0.0;
+            }
+        }
+    }
 
+    public int getDimention() {
         return dimention;
     }
 
