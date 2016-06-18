@@ -22,21 +22,23 @@ public class Vector implements Cloneable {
         if (dimention <= 0) {
             throw new IllegalArgumentException("Размерность не может быть <= 0");
         }
-        this.components = new double[dimention];
-//        for (int i=0; i < components.length; i++){
-//            this.components[i] = components[i];
-//        }
-        try {
+        if (dimention < components.length) {
+            throw new ArrayIndexOutOfBoundsException("Количество элементов переданного массива больше, чем его размерность.");
+        } else {
+            this.components = new double[dimention];
             System.arraycopy(components, 0, this.components, 0, components.length);
             if (components.length < dimention) {
                 for (int i = components.length; i < dimention; i++) {
                     this.components[i] = 0.0;
                 }
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Количество элементов переданного массива больше, чем его размерность.");
         }
     }
+
+
+//        for (int i=0; i < components.length; i++){
+//            this.components[i] = components[i];
+//        }
 
     public int getDimention() {
         return dimention;
