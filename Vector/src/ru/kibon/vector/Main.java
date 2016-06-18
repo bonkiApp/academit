@@ -5,8 +5,11 @@ public class Main {
         Vector vector = new Vector(5);
         System.out.println(vector.toString(vector));
 
-        Vector newVector = new Vector(vector);
-        System.out.println(newVector.toString(newVector));
+        Vector copyVector = new Vector(vector);
+        System.out.println(copyVector.toString(copyVector));
+
+        Vector arrVector = new Vector(1, new double[]{2, 5, 1.5});
+        System.out.println(arrVector.toString(arrVector));
 
     }
 }
