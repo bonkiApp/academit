@@ -57,15 +57,35 @@ public class Vector implements Cloneable {
     }
 
     public Vector sumVectors(Vector vector2) {
-        for (int i =0; i < this.components.length; i++){
-            this.components[i] = this.components[i] + vector2.components[i];
+        Vector v1 = (this.components.length >= vector2.components.length) ? this: vector2;
+        for (int i = 0; i < v1.components.length; i++) {
+            // сделать проверку существует ли i
+            v1.components[i] = this.components[i] + vector2.components[i];
+        }
+        return v1;
+//        if (this.components.length < vector2.components.length) {
+//
+//            for (int i = this.components.length; i < vector2.components.length; i++) {
+//                this.components[i] = 0.0;
+//            }
+//        } else if (this.components.length > vector2.components.length) {
+//            for (int i = vector2.components.length; i < this.components.length; i++) {
+//                vector2.components[i] = 0.0;
+//            }
+//        }
+//        for (int i = 0; i < this.components.length; i++) {
+//            this.components[i] = this.components[i] + vector2.components[i];
+//        }
+//        return this;
+    }
+
+    public Vector subtractVectors(Vector vector2) {
+        for (int i = 0; i < this.components.length; i++) {
+            this.components[i] = this.components[i] - vector2.components[i];
         }
         return this;
     }
 
-    public double subtractVectors() {
-        return 0;
-    }
 
     public double multipleVectors() {
         return 0;
