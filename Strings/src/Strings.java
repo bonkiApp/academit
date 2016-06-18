@@ -7,15 +7,19 @@ public class Strings {
             builder.append(i)
                     .append(", ");
         }
-        builder.delete(builder.length()-2, builder.length());
+        builder.delete(builder.length() - 2, builder.length());
         System.out.println(builder.toString());
-    }
 
-    String string = "1, 2, 3, 4, 5";
-    for (String s: string.split(", ")){
 
-    }
+        String strings = "1, 2, 3, 4, 5";
+        String parts[] = strings.split(", ");
+        int sum=0;
+        for (String s: parts){
+            sum+=Integer.parseInt(s);
+        }
+        System.out.println(parts.toString());
+        System.out.println(sum);
 
 //    int[] numbers = Integer.parseInt(string);
+    }
 }
-
