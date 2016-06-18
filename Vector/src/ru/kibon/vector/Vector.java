@@ -56,8 +56,11 @@ public class Vector implements Cloneable {
         return this.components.length;
     }
 
-    public double sumVectors() {
-        return 0;
+    public Vector sumVectors(Vector vector2) {
+        for (int i =0; i < this.components.length; i++){
+            this.components[i] = this.components[i] + vector2.components[i];
+        }
+        return this;
     }
 
     public double subtractVectors() {
