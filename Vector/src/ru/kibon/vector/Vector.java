@@ -2,7 +2,7 @@ package ru.kibon.vector;
 
 import java.util.Arrays;
 
-public class Vector implements Cloneable{
+public class Vector implements Cloneable {
     private double[] components;
     private int dimention;
 
@@ -18,15 +18,23 @@ public class Vector implements Cloneable{
         this.components = new double[anyVector.components.length];
     }
 
-    public Vector(int dimention, double[] components){
-        this.components = new double[dimention];
-        for (int i=0; i < components.length; i++){
-            this.components[i] = components[i];
+    public Vector(int dimention, double[] components) {
+        if (dimention <= 0) {
+            throw new IllegalArgumentException("Размерность не может быть <= 0");
         }
-        if (components.length < dimention){
-            for (int i = components.length; i < dimention; i++){
-                this.components [i] = 0.0;
+        this.components = new double[dimention];
+//        for (int i=0; i < components.length; i++){
+//            this.components[i] = components[i];
+//        }
+        try {
+            System.arraycopy(components, 0, this.components, 0, components.length);
+            if (components.length < dimention) {
+                for (int i = components.length; i < dimention; i++) {
+                    this.components[i] = 0.0;
+                }
             }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Количество элементов переданного массива больше, чем его размерность.");
         }
     }
 
