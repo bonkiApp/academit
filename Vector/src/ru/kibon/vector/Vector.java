@@ -57,53 +57,54 @@ public class Vector implements Cloneable {
     }
 
     public Vector sumVectors(Vector vector2) {
-        Vector minV = this;
-        Vector maxV = vector2;
+        double[] minV = this.components;
+        double[] maxV = vector2.components;
         if (this.components.length != vector2.components.length) {
             if (this.components.length < vector2.components.length) {
-                minV = this;
-                maxV = vector2;
+                minV = this.components;
+                maxV = vector2.components;
             } else {
-                minV = vector2;
-                maxV = this;
+                minV = vector2.components;
+                maxV = this.components;
             }
-            Vector newV = new Vector(maxV.components.length);
-            System.arraycopy(minV.components, 0, newV.components, 0, minV.components.length);
-            for (int i = minV.components.length; i < newV.components.length; i++) {
-                newV.components[i] = 0.0;
+            double[] newV = new double[maxV.length];
+            System.arraycopy(minV, 0, newV, 0, minV.length);
+            for (int i = minV.length; i < newV.length; i++) {
+                newV[i] = 0.0;
             }
             minV = newV;
         }
-        for (int i = 0; i < maxV.components.length; i++) {
-            minV.components[i] = minV.components[i] + maxV.components[i];
+        for (int i = 0; i < maxV.length; i++) {
+            minV[i] = minV[i] + maxV[i];
         }
-        maxV = null;
-        return minV;
+        this.components = minV;
+        return this;
     }
 
+
     public Vector subtractVectors(Vector vector2) {
-        Vector minV = this;
-        Vector maxV = vector2;
+        double[] minV = this.components;
+        double[] maxV = vector2.components;
         if (this.components.length != vector2.components.length) {
             if (this.components.length < vector2.components.length) {
-                minV = this;
-                maxV = vector2;
+                minV = this.components;
+                maxV = vector2.components;
             } else {
-                minV = vector2;
-                maxV = this;
+                minV = vector2.components;
+                maxV = this.components;
             }
-            Vector newV = new Vector(maxV.components.length);
-            System.arraycopy(minV.components, 0, newV.components, 0, minV.components.length);
-            for (int i = minV.components.length; i < newV.components.length; i++) {
-                newV.components[i] = 0.0;
+            double[] newV = new double[maxV.length];
+            System.arraycopy(minV, 0, newV, 0, minV.length);
+            for (int i = minV.length; i < newV.length; i++) {
+                newV[i] = 0.0;
             }
             minV = newV;
         }
-        for (int i = 0; i < maxV.components.length; i++) {
-            minV.components[i] = minV.components[i] - maxV.components[i];
+        for (int i = 0; i < maxV.length; i++) {
+            minV[i] = minV[i] - maxV[i];
         }
-        maxV = null;
-        return minV;
+        this.components = minV;
+        return this;
     }
 
 
