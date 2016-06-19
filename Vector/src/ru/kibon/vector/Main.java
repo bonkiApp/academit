@@ -15,10 +15,10 @@ public class Main {
 
         Vector vector2 = new Vector(5, new double[] {3, 2, 14.2, 1, -1});
 
-        arrVector.sumVectors(vector2);
+        arrVector = arrVector.sumVectors(vector2);
         System.out.println(arrVector.toString(arrVector));
 
-//        arrVector.subtractVectors(vector2);
-//        System.out.println(arrVector.toString(arrVector));
+        arrVector = arrVector.subtractVectors(vector2);
+        System.out.println(arrVector.toString(arrVector));
     }
 }
