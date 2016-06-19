@@ -13,7 +13,7 @@ public class Main {
 
         System.out.println(copyArrVector.getSize());
 
-        Vector vector2 = new Vector(5, new double[] {3, 2, 14.2, 1, -1});
+        Vector vector2 = new Vector(5, new double[] {3, 2, 14.2, 1,-3 });
 
         arrVector = arrVector.sumVectors(vector2);
         System.out.println(arrVector.toString(arrVector));
