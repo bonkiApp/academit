@@ -1,6 +1,7 @@
 package ru.kibon.vector;
 
 import java.util.Arrays;
+import java.text.DecimalFormat;
 
 public class Vector implements Cloneable {
     private double[] components;
@@ -44,9 +45,10 @@ public class Vector implements Cloneable {
     }
 
     public String toString(Vector vector) {
+        DecimalFormat df = new DecimalFormat("#.##");
         String vect = "";
         for (double el : vector.components) {
-            vect = vect + ", " + el;
+            vect = vect + ", " + df.format(el);
         }
         vect = vect.substring(2, vect.length());
         return "{ " + vect + " }";
@@ -121,11 +123,11 @@ public class Vector implements Cloneable {
         }
         return this;
     }
-//
-//    public Vector calcLength() {
-//        return 0;
-//    }
-//
+
+    public int calcLength() {
+        return this.components.length;
+    }
+
 //    public Vector getComponent() {
 //        return 0;
 //    }
