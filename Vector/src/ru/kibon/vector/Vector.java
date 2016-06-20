@@ -136,14 +136,38 @@ public class Vector implements Cloneable {
         this.components[component] = newComponent;
     }
 
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) { return true; }
+//        if (obj == null) { return false; }
+//        if(getClass() != obj.getClass()) { return false; }
+//        Vector otherVector = (Vector) obj;
+//        if (dimention != otherVector.dimention) { return false; }
+//        if (!Arrays.equals(components, otherVector.components)) { return false; }
+//        return true;
+//    }
+
+
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) { return true; }
-        if (obj == null) { return false; }
-        if(getClass() != obj.getClass()) { return false; }
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
         Vector otherVector = (Vector) obj;
-        if (dimention != otherVector.dimention) { return false; }
-        if (!Arrays.equals(components, otherVector.components)) { return false; }
+        if (dimention != otherVector.dimention) {
+            return false;
+        }
+        for (int i = 0; i < components.length; i++) {
+            if (Math.abs(this.components[i] - otherVector.components[i]) > 0.0001) {
+                return false;
+            }
+        }
         return true;
     }
 
@@ -153,10 +177,10 @@ public class Vector implements Cloneable {
         int result = 1;
         result = prime * result + dimention;
         int i = 1;
-        for (double c: components){
+        for (double c : components) {
             c = Double.doubleToLongBits(c);
             int b = (int) c;
-            result = prime * result + b*i;
+            result = prime * result + b * i;
             i += 1;
         }
         return result;
