@@ -136,10 +136,32 @@ public class Vector implements Cloneable {
         this.components[component] = newComponent;
     }
 
-//    public boolean equals() {
-//        return true;
-//    }
-//
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) { return true; }
+        if (obj == null) { return false; }
+        if(getClass() != obj.getClass()) { return false; }
+        Vector otherVector = (Vector) obj;
+        if (dimention != otherVector.dimention) { return false; }
+        if (!Arrays.equals(components, otherVector.components)) { return false; }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 37;
+        int result = 1;
+        result = prime * result + dimention;
+        int i = 1;
+        for (double c: components){
+            c = Double.doubleToLongBits(c);
+            int b = (int) c;
+            result = prime * result + b*i;
+            i += 1;
+        }
+        return result;
+    }
+
 //    public static Vector foldVectors() {
 //        return 0;
 //    }
