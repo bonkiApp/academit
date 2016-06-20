@@ -176,12 +176,10 @@ public class Vector implements Cloneable {
         final int prime = 37;
         int result = 1;
         result = prime * result + dimention;
-        int i = 1;
-        for (double c : components) {
-            c = Double.doubleToLongBits(c);
-            int b = (int) c;
-            result = prime * result + b * i;
-            i += 1;
+        for (int i = 1; i <= components.length; i++) {
+           double d = Double.doubleToLongBits(components[i-1]);
+            int in = (int) d;
+            result = prime * result + in * i*prime;
         }
         return result;
     }

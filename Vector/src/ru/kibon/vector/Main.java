@@ -38,8 +38,12 @@ public class Main {
 
         System.out.println(arrVector.equals(copyArrVector));
 
-        System.out.println(vector.hashCode());
-        System.out.println(vector2.hashCode());
+        Vector v1 = new Vector(3, new double[] {1, 2, 3});
+        Vector v2 = new Vector(3, new double[] {3, 2, 1});
+
+        System.out.println(v1.hashCode());
+        System.out.println(v2.hashCode());
+        System.out.println(v1.equals(v2));
 
     }
 }
