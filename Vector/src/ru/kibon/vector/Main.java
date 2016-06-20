@@ -20,5 +20,12 @@ public class Main {
 
         arrVector = arrVector.subtractVectors(vector2);
         System.out.println(arrVector.toString(arrVector));
+
+        vector2 = vector2.multipleVectors(3);
+        System.out.println(vector2.toString(vector2));
+
+        vector2 = vector2.reversVector();
+        System.out.println(vector2.toString(vector2));
+
     }
 }
