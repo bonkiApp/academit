@@ -9,7 +9,9 @@ public class Main {
         System.out.println(arrVector.toString(arrVector));
 
         Vector copyArrVector = new Vector(arrVector);
-        System.out.println(arrVector.toString(arrVector));
+        System.out.println(copyArrVector.toString(copyArrVector));
+
+        System.out.println(arrVector.equals(copyArrVector));
 
         System.out.println(copyArrVector.getSize());
 
@@ -33,6 +35,11 @@ public class Main {
 
         vector2.setComponent(3, 4);
         System.out.println(vector2.toString(vector2));
+
+        System.out.println(arrVector.equals(copyArrVector));
+
+        System.out.println(vector.hashCode());
+        System.out.println(vector2.hashCode());
 
     }
 }
