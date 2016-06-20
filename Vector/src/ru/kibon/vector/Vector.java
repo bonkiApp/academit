@@ -17,6 +17,7 @@ public class Vector implements Cloneable {
 
     public Vector(Vector anyVector) {
         this.components = new double[anyVector.components.length];
+        System.arraycopy(anyVector.components, 0, this.components, 0, components.length);
     }
 
     public Vector(int dimention, double[] components) {
@@ -148,8 +149,8 @@ public class Vector implements Cloneable {
 //    }
 
 
-    @Override
-    public boolean equals(Object obj) {
+
+    public boolean equals(Vector obj) {
         if (this == obj) {
             return true;
         }
@@ -159,12 +160,11 @@ public class Vector implements Cloneable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        Vector otherVector = (Vector) obj;
-        if (dimention != otherVector.dimention) {
+        if (this.components.length != obj.components.length) {
             return false;
         }
         for (int i = 0; i < components.length; i++) {
-            if (Math.abs(this.components[i] - otherVector.components[i]) > 0.0001) {
+            if (Math.abs(this.components[i] - obj.components[i]) > 0.0001) {
                 return false;
             }
         }
