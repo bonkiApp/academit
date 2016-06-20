@@ -108,40 +108,46 @@ public class Vector implements Cloneable {
     }
 
 
-    public double multipleVectors() {
-        return 0;
+    public Vector multipleVectors(double scalar) {
+        for (int i = 0; i < this.components.length; i++) {
+            this.components[i] = this.components[i] * scalar;
+        }
+        return this;
     }
 
-    public double reversVector() {
-        return 0;
+    public Vector reversVector() {
+        for (int i = 0; i < this.components.length; i++) {
+            this.components[i] = this.components[i] * (-1);
+        }
+        return this;
     }
-
-    public double calcLength() {
-        return 0;
-    }
-
-    public double getComponent() {
-        return 0;
-    }
-
-    public double setComponent() {
-        return 0;
-    }
-
-    public boolean equals() {
-        return true;
-    }
-
-    public static double foldVectors() {
-        return 0;
-    }
-
-    public static double subsVectors() {
-        return 0;
-    }
-
-    public static double scalarMultiplyVectors() {
-        return 0;
-    }
+//
+//    public Vector calcLength() {
+//        return 0;
+//    }
+//
+//    public Vector getComponent() {
+//        return 0;
+//    }
+//
+//    public Vector setComponent() {
+//        return 0;
+//    }
+//
+//    public boolean equals() {
+//        return true;
+//    }
+//
+//    public static Vector foldVectors() {
+//        return 0;
+//    }
+//
+//    public static Vector subsVectors() {
+//        return 0;
+//    }
+//
+//    public static Vector scalarMultiplyVectors() {
+//        return 0;
+//    }
 
 }
