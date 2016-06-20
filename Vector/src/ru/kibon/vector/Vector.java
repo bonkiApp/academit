@@ -128,14 +128,14 @@ public class Vector implements Cloneable {
         return this.components.length;
     }
 
-//    public Vector getComponent() {
-//        return 0;
-//    }
-//
-//    public Vector setComponent() {
-//        return 0;
-//    }
-//
+    public double getComponent(int component) {
+        return this.components[component];
+    }
+
+    public void setComponent(int component, double newComponent) {
+        this.components[component] = newComponent;
+    }
+
 //    public boolean equals() {
 //        return true;
 //    }

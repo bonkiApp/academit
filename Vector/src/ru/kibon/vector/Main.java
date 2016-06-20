@@ -27,5 +27,12 @@ public class Main {
         vector2 = vector2.reversVector();
         System.out.println(vector2.toString(vector2));
 
+        System.out.println(vector2.calcLength());
+
+        System.out.println(vector2.getComponent(3));
+
+        vector2.setComponent(3, 4);
+        System.out.println(vector2.toString(vector2));
+
     }
 }
