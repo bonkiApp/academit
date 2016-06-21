@@ -209,29 +209,54 @@ public class Vector implements Cloneable {
         return sumVector;
     }
 
+//    public static Vector subsVectors(Vector v1, Vector v2) {
+//        double[] maxV = v1.components;
+//        double[] minV = v2.components;
+//        if (v1.components.length != v2.components.length) {
+//            if (v1.components.length < v2.components.length) {
+//                minV = v1.components;
+//                maxV = v2.components;
+//            } else {
+//                minV = v2.components;
+//                maxV = v1.components;
+//            }
+//            double[] newV = new double[maxV.length];
+//            System.arraycopy(minV, 0, newV, 0, minV.length);
+//            for (int i = minV.length; i < newV.length; i++) {
+//                newV[i] = 0.0;
+//            }
+//            minV = newV;
+//        }
+//        for (int i = 0; i < maxV.length; i++) {
+//            minV[i] = minV[i] - maxV[i];
+//        }
+//        Vector subVector = new Vector(maxV.length);
+//        subVector.components = minV;
+//        return subVector;
+//    }
+
     public static Vector subsVectors(Vector v1, Vector v2) {
-        double[] maxV = v1.components;
-        double[] minV = v2.components;
         if (v1.components.length != v2.components.length) {
+            double[] newC = new double[Math.max(v1.components.length, v2.components.length)];
             if (v1.components.length < v2.components.length) {
-                minV = v1.components;
-                maxV = v2.components;
+                System.arraycopy(v1.components, 0, newC, 0, v1.components.length);
+                for (int i = v1.components.length; i < newC.length; i++) {
+                    newC[i] = 0.0;
+                }
+                v1.components = newC;
             } else {
-                minV = v2.components;
-                maxV = v1.components;
+                System.arraycopy(v2.components, 0, newC, 0, v2.components.length);
+                for (int i = v2.components.length; i < newC.length; i++) {
+                    newC[i] = 0.0;
+                }
+                v2.components = newC;
             }
-            double[] newV = new double[maxV.length];
-            System.arraycopy(minV, 0, newV, 0, minV.length);
-            for (int i = minV.length; i < newV.length; i++) {
-                newV[i] = 0.0;
-            }
-            minV = newV;
         }
-        for (int i = 0; i < maxV.length; i++) {
-            minV[i] = minV[i] - maxV[i];
+        for (int i = 0; i < v1.components.length; i++) {
+            v1.components[i] = v1.components[i] - v2.components[i];
         }
-        Vector subVector = new Vector(maxV.length);
-        subVector.components = minV;
+        Vector subVector = new Vector(v1.components.length);
+        subVector.components = v1.components;
         return subVector;
     }
 
