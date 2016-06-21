@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ba4ac7e-8c08-495f-ae2e-7c90f46eef61" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vector/src/ru/kibon/vector/Main.java" afterPath="$PROJECT_DIR$/Vector/src/ru/kibon/vector/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vector/src/ru/kibon/vector/Vector.java" afterPath="$PROJECT_DIR$/Vector/src/ru/kibon/vector/Vector.java" />
     </list>
     <ignored path="academit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -592,12 +590,6 @@
       <workItem from="1465223021937" duration="4307000" />
       <workItem from="1465396433125" duration="1262000" />
     </task>
-    <task id="LOCAL-00002" summary="0">
-      <created>1464797062765</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1464797062765</updated>
-    </task>
     <task id="LOCAL-00003" summary="исправления">
       <created>1464797163578</created>
       <option name="number" value="00003" />
@@ -886,7 +878,13 @@
       <option name="project" value="LOCAL" />
       <updated>1466530153171</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="ужас то какой...">
+      <created>1466532755546</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1466532755546</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -960,7 +958,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="вектор toString" />
     <MESSAGE value="toString" />
     <MESSAGE value="стринги" />
     <MESSAGE value="Стринги" />
@@ -985,7 +982,8 @@
     <MESSAGE value="статические методы суммы и вычитания" />
     <MESSAGE value="статические методы  вычитания немного иначе" />
     <MESSAGE value="save" />
-    <option name="LAST_COMMIT_MESSAGE" value="save" />
+    <MESSAGE value="ужас то какой..." />
+    <option name="LAST_COMMIT_MESSAGE" value="ужас то какой..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
