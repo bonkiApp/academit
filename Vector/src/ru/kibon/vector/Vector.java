@@ -137,18 +137,6 @@ public class Vector implements Cloneable {
         this.components[component] = newComponent;
     }
 
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (this == obj) { return true; }
-//        if (obj == null) { return false; }
-//        if(getClass() != obj.getClass()) { return false; }
-//        Vector otherVector = (Vector) obj;
-//        if (dimention != otherVector.dimention) { return false; }
-//        if (!Arrays.equals(components, otherVector.components)) { return false; }
-//        return true;
-//    }
-
-
     public boolean equals(Vector obj) {
         if (this == obj) {
             return true;
@@ -260,8 +248,12 @@ public class Vector implements Cloneable {
         return subVector;
     }
 
-//    public static Vector scalarMultiplyVectors() {
-//        return 0;
-//    }
-
+    public static Vector scalarMultiplyVectors(Vector v1, double scalar) {
+        Vector scalarV = new Vector(v1.components.length);
+        System.arraycopy(v1.components, 0, scalarV.components, 0, v1.components.length);
+        for (int i = 0; i < v1.components.length; i++) {
+            scalarV.components[i] = scalarV.components[i] * scalar;
+        }
+        return scalarV;
+    }
 }
