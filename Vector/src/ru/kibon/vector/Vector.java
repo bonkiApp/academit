@@ -149,7 +149,6 @@ public class Vector implements Cloneable {
 //    }
 
 
-
     public boolean equals(Vector obj) {
         if (this == obj) {
             return true;
@@ -177,21 +176,65 @@ public class Vector implements Cloneable {
         int result = 1;
         result = prime * result + dimention;
         for (int i = 1; i <= components.length; i++) {
-           double d = Double.doubleToLongBits(components[i-1]);
+            double d = 10000 * components[i - 1];
             int in = (int) d;
-            result = prime * result + in * i*prime;
+            result = prime * result + in * i * prime;
         }
         return result;
     }
 
-//    public static Vector foldVectors() {
-//        return 0;
-//    }
-//
-//    public static Vector subsVectors() {
-//        return 0;
-//    }
-//
+    public static Vector summationVectors(Vector v1, Vector v2) {
+        double[] minV = v1.components;
+        double[] maxV = v2.components;
+        if (v1.components.length != v2.components.length) {
+            if (v1.components.length < v2.components.length) {
+                minV = v1.components;
+                maxV = v2.components;
+            } else {
+                minV = v2.components;
+                maxV = v1.components;
+            }
+            double[] newV = new double[maxV.length];
+            System.arraycopy(minV, 0, newV, 0, minV.length);
+            for (int i = minV.length; i < newV.length; i++) {
+                newV[i] = 0.0;
+            }
+            minV = newV;
+        }
+        for (int i = 0; i < maxV.length; i++) {
+            minV[i] = minV[i] + maxV[i];
+        }
+        Vector sumVector = new Vector(maxV.length);
+        sumVector.components = minV;
+        return sumVector;
+    }
+
+    public static Vector subsVectors(Vector v1, Vector v2) {
+        double[] maxV = v1.components;
+        double[] minV = v2.components;
+        if (v1.components.length != v2.components.length) {
+            if (v1.components.length < v2.components.length) {
+                minV = v1.components;
+                maxV = v2.components;
+            } else {
+                minV = v2.components;
+                maxV = v1.components;
+            }
+            double[] newV = new double[maxV.length];
+            System.arraycopy(minV, 0, newV, 0, minV.length);
+            for (int i = minV.length; i < newV.length; i++) {
+                newV[i] = 0.0;
+            }
+            minV = newV;
+        }
+        for (int i = 0; i < maxV.length; i++) {
+            minV[i] = minV[i] - maxV[i];
+        }
+        Vector subVector = new Vector(maxV.length);
+        subVector.components = minV;
+        return subVector;
+    }
+
 //    public static Vector scalarMultiplyVectors() {
 //        return 0;
 //    }
