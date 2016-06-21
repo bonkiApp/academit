@@ -55,9 +55,9 @@ public class Vector implements Cloneable {
         return "{ " + vect + " }";
     }
 
-    public double getSize() {
+    public double calcLength() {
         double sum = 0;
-        for (double d : this.components){
+        for (double d : this.components) {
             d *= d;
             sum += d;
         }
@@ -146,12 +146,12 @@ public class Vector implements Cloneable {
 
     public Vector reversVector() {
         for (int i = 0; i < this.components.length; i++) {
-            this.components[i] = this.components[i] * (-1);
+            this.components[i] = this.components[i] * (-1) + 0.0; //избавление от чудесного -0
         }
         return this;
     }
 
-    public int calcLength() {
+    public int getSize() {
         return this.components.length;
     }
 
@@ -177,7 +177,7 @@ public class Vector implements Cloneable {
             return false;
         }
         for (int i = 0; i < components.length; i++) {
-            if (Math.abs(this.components[i] - obj.components[i]) > 0.0001) {
+            if (Math.abs(this.components[i] - obj.components[i]) >= 0.0001) {
                 return false;
             }
         }
