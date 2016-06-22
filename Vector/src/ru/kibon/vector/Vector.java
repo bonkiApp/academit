@@ -1,18 +1,15 @@
 package ru.kibon.vector;
 
-import java.util.Arrays;
 import java.text.DecimalFormat;
 
 public class Vector implements Cloneable {
     private double[] components;
-    private int dimention;
 
-    public Vector(int dimention) {
-        if (dimention <= 0) {
+    public Vector(int dimension) {
+        if (dimension <= 0) {
             throw new IllegalArgumentException("Размерность не может быть <= 0");
         }
-        this.components = new double[dimention];
-        Arrays.fill(this.components, 0.0);
+        this.components = new double[dimension];
     }
 
     public Vector(Vector anyVector) {
@@ -20,46 +17,39 @@ public class Vector implements Cloneable {
         System.arraycopy(anyVector.components, 0, this.components, 0, components.length);
     }
 
-    public Vector(int dimention, double[] components) {
-        if (dimention <= 0) {
+    public Vector(int dimension, double[] components) {
+        if (dimension <= 0) {
             throw new IllegalArgumentException("Размерность не может быть <= 0");
         }
-        if (dimention < components.length) {
-            throw new ArrayIndexOutOfBoundsException("Количество элементов переданного массива больше, чем его размерность.");
-        } else {
-            this.components = new double[dimention];
-            System.arraycopy(components, 0, this.components, 0, components.length);
-            if (components.length < dimention) {
-                for (int i = components.length; i < dimention; i++) {
-                    this.components[i] = 0.0;
-                }
+        if (dimension < components.length) {
+            double[] newComponents = new double[dimension];
+            for (int i = 0; i < dimension; i++) {
+                newComponents[i] = components[i];
+                this.components = newComponents;
             }
+        } else {
+            this.components = new double[dimension];
+            System.arraycopy(components, 0, this.components, 0, components.length);
         }
     }
 
-    public int getDimention() {
-        return dimention;
-    }
-
-    public void setDimention(int dimention) {
-        this.dimention = dimention;
-    }
-
-    public String toString(Vector vector) {
+    public StringBuilder toString(Vector vector) {
         DecimalFormat df = new DecimalFormat("#.##");
-        String vect = "";
+        StringBuilder builder = new StringBuilder();
+        builder.append("{ ");
         for (double el : vector.components) {
-            vect = vect + ", " + df.format(el);
+            builder.append(df.format(el));
+            builder.append(", ");
         }
-        vect = vect.substring(2, vect.length());
-        return "{ " + vect + " }";
+        builder.delete(builder.length() - 2, builder.length());
+        builder.append(" }");
+        return builder;
     }
 
     public double calcLength() {
         double sum = 0;
         for (double d : this.components) {
-            d *= d;
-            sum += d;
+            sum += d * d;
         }
         return Math.sqrt(sum);
     }
@@ -77,9 +67,6 @@ public class Vector implements Cloneable {
             }
             double[] newV = new double[maxV.length];
             System.arraycopy(minV, 0, newV, 0, minV.length);
-            for (int i = minV.length; i < newV.length; i++) {
-                newV[i] = 0.0;
-            }
             minV = newV;
         }
         for (int i = 0; i < maxV.length; i++) {
@@ -117,15 +104,9 @@ public class Vector implements Cloneable {
             double[] newC = new double[Math.max(this.components.length, vector2.components.length)];
             if (this.components.length < vector2.components.length) {
                 System.arraycopy(this.components, 0, newC, 0, this.components.length);
-                for (int i = this.components.length; i < newC.length; i++) {
-                    newC[i] = 0.0;
-                }
                 this.components = newC;
             } else {
                 System.arraycopy(vector2.components, 0, newC, 0, vector2.components.length);
-                for (int i = vector2.components.length; i < newC.length; i++) {
-                    newC[i] = 0.0;
-                }
                 vector2.components = newC;
             }
         }
@@ -139,15 +120,13 @@ public class Vector implements Cloneable {
 
     public Vector multipleVectors(double scalar) {
         for (int i = 0; i < this.components.length; i++) {
-            this.components[i] = this.components[i] * scalar;
+            this.components[i] = this.components[i] * scalar + 0.0;
         }
         return this;
     }
 
-    public Vector reversVector() {
-        for (int i = 0; i < this.components.length; i++) {
-            this.components[i] = this.components[i] * (-1) + 0.0; //избавление от чудесного -0
-        }
+    public Vector reverseVector() {
+        this.multipleVectors(-1);
         return this;
     }
 
@@ -188,7 +167,7 @@ public class Vector implements Cloneable {
     public int hashCode() {
         final int prime = 37;
         int result = 1;
-        result = prime * result + dimention;
+        result = prime * result + components.length;
         for (int i = 1; i <= components.length; i++) {
             double d = 10000 * components[i - 1];
             int in = (int) d;
