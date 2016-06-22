@@ -76,7 +76,6 @@ public class Vector implements Cloneable {
         return this;
     }
 
-
     public Vector subtractVectors(Vector vector2) {
 //        double[] minV = this.components;
 //        double[] maxV = vector2.components;
@@ -117,8 +116,7 @@ public class Vector implements Cloneable {
 
     }
 
-
-    public Vector multipleVectors(double scalar) {
+    public Vector multipleVector(double scalar) {
         for (int i = 0; i < this.components.length; i++) {
             this.components[i] = this.components[i] * scalar + 0.0;
         }
@@ -126,7 +124,7 @@ public class Vector implements Cloneable {
     }
 
     public Vector reverseVector() {
-        this.multipleVectors(-1);
+        this.multipleVector(-1);
         return this;
     }
 
@@ -177,88 +175,31 @@ public class Vector implements Cloneable {
     }
 
     public static Vector summationVectors(Vector v1, Vector v2) {
-        double[] minV = v1.components;
-        double[] maxV = v2.components;
-        if (v1.components.length != v2.components.length) {
-            if (v1.components.length < v2.components.length) {
-                minV = v1.components;
-                maxV = v2.components;
-            } else {
-                minV = v2.components;
-                maxV = v1.components;
-            }
-            double[] newV = new double[maxV.length];
-            System.arraycopy(minV, 0, newV, 0, minV.length);
-            for (int i = minV.length; i < newV.length; i++) {
-                newV[i] = 0.0;
-            }
-            minV = newV;
-        }
-        for (int i = 0; i < maxV.length; i++) {
-            minV[i] = minV[i] + maxV[i];
-        }
-        Vector sumVector = new Vector(maxV.length);
-        sumVector.components = minV;
-        return sumVector;
+        Vector newV1 = new Vector(v1);
+        Vector newV2 = new Vector(v2);
+        return newV1.sumVectors(newV2);
     }
-
-//    public static Vector subsVectors(Vector v1, Vector v2) {
-//        double[] maxV = v1.components;
-//        double[] minV = v2.components;
-//        if (v1.components.length != v2.components.length) {
-//            if (v1.components.length < v2.components.length) {
-//                minV = v1.components;
-//                maxV = v2.components;
-//            } else {
-//                minV = v2.components;
-//                maxV = v1.components;
-//            }
-//            double[] newV = new double[maxV.length];
-//            System.arraycopy(minV, 0, newV, 0, minV.length);
-//            for (int i = minV.length; i < newV.length; i++) {
-//                newV[i] = 0.0;
-//            }
-//            minV = newV;
-//        }
-//        for (int i = 0; i < maxV.length; i++) {
-//            minV[i] = minV[i] - maxV[i];
-//        }
-//        Vector subVector = new Vector(maxV.length);
-//        subVector.components = minV;
-//        return subVector;
-//    }
 
     public static Vector subsVectors(Vector v1, Vector v2) {
-        if (v1.components.length != v2.components.length) {
-            double[] newC = new double[Math.max(v1.components.length, v2.components.length)];
-            if (v1.components.length < v2.components.length) {
-                System.arraycopy(v1.components, 0, newC, 0, v1.components.length);
-                for (int i = v1.components.length; i < newC.length; i++) {
-                    newC[i] = 0.0;
-                }
-                v1.components = newC;
-            } else {
-                System.arraycopy(v2.components, 0, newC, 0, v2.components.length);
-                for (int i = v2.components.length; i < newC.length; i++) {
-                    newC[i] = 0.0;
-                }
-                v2.components = newC;
-            }
-        }
-        for (int i = 0; i < v1.components.length; i++) {
-            v1.components[i] = v1.components[i] - v2.components[i];
-        }
-        Vector subVector = new Vector(v1.components.length);
-        subVector.components = v1.components;
-        return subVector;
+        Vector newV1 = new Vector(v1);
+        Vector newV2 = new Vector(v2);
+        return newV1.subtractVectors(newV2);
     }
 
-    public static Vector scalarMultiplyVectors(Vector v1, double scalar) {
-        Vector scalarV = new Vector(v1.components.length);
-        System.arraycopy(v1.components, 0, scalarV.components, 0, v1.components.length);
-        for (int i = 0; i < v1.components.length; i++) {
-            scalarV.components[i] = scalarV.components[i] * scalar;
+    public static Vector multiplyVectors(Vector v1, Vector v2) {
+//        Vector scalarV = new Vector(v1.components.length);
+//        System.arraycopy(v1.components, 0, scalarV.components, 0, v1.components.length);
+//        for (int i = 0; i < v1.components.length; i++) {
+//            scalarV.components[i] = scalarV.components[i] * scalar;
+//        }
+//        return scalarV;
+        Vector newV1 = new Vector(v1);
+        Vector newV2 = new Vector(v2);
+        if (newV1.components.length != newV2.components.length) {
+
         }
-        return scalarV;
+        for (int i = 0; i <) {
+            i *= newV2.components[i];
+        }
     }
 }

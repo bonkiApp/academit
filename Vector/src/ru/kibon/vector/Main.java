@@ -26,7 +26,7 @@ public class Main {
         System.out.printf("Разность тех же векторов равна: %s%n", copyArrVector.toString(copyArrVector.subtractVectors(vector2)));
 
         int scalar = 3;
-        System.out.printf("Вектор %s умноженный на скаляр %s равен: %s%n", vector2.toString(vector2), scalar, vector2.toString(vector2.multipleVectors(scalar)));
+        System.out.printf("Вектор %s умноженный на скаляр %s равен: %s%n", vector2.toString(vector2), scalar, vector2.toString(vector2.multipleVector(scalar)));
 
         vector2 = vector2.reverseVector();
         System.out.printf("Разворот предыдущего вектора: %s%n", vector2.toString(vector2));
@@ -53,7 +53,7 @@ public class Main {
         Vector v4 = Vector.subsVectors(v1, v2);
         System.out.printf("Разность векторов v1 и v2 равна: %s%n", v4.toString(v4));
 
-        Vector v5 = Vector.scalarMultiplyVectors(v3, value);
-        System.out.printf("Произведение вектора v3 на скаляр %s равно: %s%n", value, v5.toString(v5));
+        Vector v5 = Vector.multiplyVectors(v3, v1);
+        System.out.printf("Скалярное произведение вектора v3 на вектор v1 равно: %s%n", v5.toString(v5));
     }
 }
