@@ -1,7 +1,6 @@
 package ru.kibon.vector;
 
 import java.text.DecimalFormat;
-import java.util.Arrays;
 
 public class Vector implements Cloneable {
     private double[] components;

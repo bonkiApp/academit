@@ -53,7 +53,7 @@ public class Main {
         Vector v4 = Vector.subsVectors(v1, v2);
         System.out.printf("Разность векторов v1 и v2 равна: %s%n", v4.toString(v4));
 
-        Vector v5 = Vector.multiplyVectors(v3, v1);
-        System.out.printf("Скалярное произведение вектора v3 на вектор v1 равно: %s%n", v5.toString(v5));
+        Vector v5 = Vector.multiplyVectors(v1, v2);
+        System.out.printf("Скалярное произведение вектора v1 на вектор v2 равно: %s%n", v5.toString(v5));
     }
 }
