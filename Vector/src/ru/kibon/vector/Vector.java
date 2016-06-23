@@ -1,6 +1,7 @@
 package ru.kibon.vector;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
 
 public class Vector implements Cloneable {
     private double[] components;
@@ -118,7 +119,8 @@ public class Vector implements Cloneable {
         this.components[component] = newComponent;
     }
 
-    public boolean equals(Vector obj) {
+    @Override
+    public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -128,11 +130,12 @@ public class Vector implements Cloneable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        if (this.components.length != obj.components.length) {
+        Vector other = (Vector) obj;
+        if (this.components.length != other.components.length) {
             return false;
         }
         for (int i = 0; i < components.length; i++) {
-            if (Math.abs(this.components[i] - obj.components[i]) >= 0.0001) {
+            if (Math.abs(this.components[i] - other.components[i]) >= 0.0001) {
                 return false;
             }
         }
@@ -143,12 +146,7 @@ public class Vector implements Cloneable {
     public int hashCode() {
         final int prime = 37;
         int result = 1;
-        result = prime * result + components.length;
-        for (int i = 1; i <= components.length; i++) {
-            double d = 10000 * components[i - 1];
-            int in = (int) d;
-            result = prime * result + in * i * prime;
-        }
+        result = prime * result + Arrays.hashCode(this.components);
         return result;
     }
 

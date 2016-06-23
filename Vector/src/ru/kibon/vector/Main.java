@@ -40,8 +40,8 @@ public class Main {
         vector2.setComponent(component2, value);
         System.out.printf("Установка значения компонента под индексом %s равным %s: %s%n", component2, value, vector2.toString(vector2));
 
-        Vector v1 = new Vector(4, new double[]{1, 2, 3, 4});
-        Vector v2 = new Vector(3, new double[]{1, 2, 3});
+        Vector v1 = new Vector(3, new double[]{1, 2, 3});
+        Vector v2 = new Vector(4, new double[]{1, 2, 3, 5});
 
         System.out.printf("HashCode вектора v1 %s равен: %s%n", v1.toString(v1), v1.hashCode());
         System.out.printf("HashCode вектора v2 %s равен: %s%n", v2.toString(v2), v2.hashCode());
