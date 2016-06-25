@@ -22,19 +22,11 @@ public class Vector implements Cloneable {
         if (dimension <= 0) {
             throw new IllegalArgumentException("Размерность не может быть <= 0");
         }
-        if (dimension < components.length) {
-            double[] newComponents = new double[dimension];
-            for (int i = 0; i < dimension; i++) {
-                newComponents[i] = components[i];
-                this.components = newComponents;
-            }
-        } else {
-            this.components = new double[dimension];
-            System.arraycopy(components, 0, this.components, 0, components.length);
-        }
+        this.components = new double[dimension];
+        System.arraycopy(components, 0, this.components, 0, Math.min(dimension, components.length));
     }
 
-    public StringBuilder toString(Vector vector) {
+    public String toString(Vector vector) {
         DecimalFormat df = new DecimalFormat("#.##");
         StringBuilder builder = new StringBuilder();
         builder.append("{ ");
@@ -44,7 +36,7 @@ public class Vector implements Cloneable {
         }
         builder.delete(builder.length() - 2, builder.length());
         builder.append(" }");
-        return builder;
+        return builder.toString();
     }
 
     public double calcLength() {
@@ -146,7 +138,7 @@ public class Vector implements Cloneable {
     public int hashCode() {
         final int prime = 37;
         int result = 1;
-        result = prime * result + Arrays.hashCode(this.components);
+        result = prime * result + Arrays.hashCode(components);
         return result;
     }
 
@@ -162,7 +154,7 @@ public class Vector implements Cloneable {
         return newV1.subtractVectors(newV2);
     }
 
-    public static Vector multiplyVectors(Vector v1, Vector v2) {
+    public static double multiplyVectors(Vector v1, Vector v2) {
         Vector newV1 = new Vector(v1);
         Vector newV2 = new Vector(v2);
         if (newV1.components.length != newV2.components.length) {
@@ -175,9 +167,10 @@ public class Vector implements Cloneable {
                 newV2.components = newComponent;
             }
         }
+        double result = 0;
         for (int i = 0; i < newV1.components.length; i++) {
-            newV1.components[i] *= newV2.components[i];
+            result += newV1.components[i] * newV2.components[i];
         }
-        return newV1;
+        return result;
     }
 }
