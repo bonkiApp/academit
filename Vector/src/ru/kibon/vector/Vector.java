@@ -48,43 +48,27 @@ public class Vector implements Cloneable {
     }
 
     public Vector sumVectors(Vector vector2) {
-        double[] minV = this.components;
-        double[] maxV = vector2.components;
-        if (this.components.length != vector2.components.length) {
-            if (this.components.length < vector2.components.length) {
-                minV = this.components;
-                maxV = vector2.components;
-            } else {
-                minV = vector2.components;
-                maxV = this.components;
-            }
-            double[] newV = new double[maxV.length];
-            System.arraycopy(minV, 0, newV, 0, minV.length);
-            minV = newV;
+        if (this.components.length < vector2.components.length) {
+            double[] newV = new double[vector2.components.length];
+            System.arraycopy(this.components, 0, newV, 0, this.components.length);
+            this.components = newV;
         }
-        for (int i = 0; i < maxV.length; i++) {
-            minV[i] = minV[i] + maxV[i];
+        for (int i = 0; i < vector2.components.length; i++) {
+            this.components[i] = this.components[i] + vector2.components[i];
         }
-        this.components = minV;
         return this;
     }
 
     public Vector subtractVectors(Vector vector2) {
-        if (this.components.length != vector2.components.length) {
-            double[] newC = new double[Math.max(this.components.length, vector2.components.length)];
-            if (this.components.length < vector2.components.length) {
-                System.arraycopy(this.components, 0, newC, 0, this.components.length);
-                this.components = newC;
-            } else {
-                System.arraycopy(vector2.components, 0, newC, 0, vector2.components.length);
-                vector2.components = newC;
-            }
+        if (this.components.length < vector2.components.length) {
+            double[] newV = new double[vector2.components.length];
+            System.arraycopy(this.components, 0, newV, 0, this.components.length);
+            this.components = newV;
         }
-        for (int i = 0; i < this.components.length; i++) {
+        for (int i = 0; i < vector2.components.length; i++) {
             this.components[i] = this.components[i] - vector2.components[i];
         }
         return this;
-
     }
 
     public Vector multipleVector(double scalar) {
@@ -144,14 +128,12 @@ public class Vector implements Cloneable {
 
     public static Vector summationVectors(Vector v1, Vector v2) {
         Vector newV1 = new Vector(v1);
-        Vector newV2 = new Vector(v2);
-        return newV1.sumVectors(newV2);
+        return newV1.sumVectors(v2);
     }
 
     public static Vector subsVectors(Vector v1, Vector v2) {
         Vector newV1 = new Vector(v1);
-        Vector newV2 = new Vector(v2);
-        return newV1.subtractVectors(newV2);
+        return newV1.subtractVectors(v2);
     }
 
     public static double multiplyVectors(Vector v1, Vector v2) {

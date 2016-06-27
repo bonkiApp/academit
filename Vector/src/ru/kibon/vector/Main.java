@@ -18,7 +18,7 @@ public class Main {
 
         System.out.printf("Размерность вектора %s равна %s%n", copyArrVector.toString(copyArrVector), copyArrVector.getSize());
 
-        Vector vector2 = new Vector(5, new double[]{3, 2, 14.2, 1}); // дополнительный вектор для примеров
+        Vector vector2 = new Vector(4, new double[]{3, 2, 14.2, 1});
         System.out.println(vector2.toString(vector2));
 
         System.out.printf("Сумма векторов %s и %s равна: %s%n", arrVector.toString(arrVector), vector2.toString(vector2), arrVector.toString(arrVector.sumVectors(vector2)));
@@ -53,7 +53,7 @@ public class Main {
         Vector v4 = Vector.subsVectors(v1, v2);
         System.out.printf("Разность векторов v1 и v2 равна: %s%n", v4.toString(v4));
 
-        Vector v5 = Vector.multiplyVectors(v1, v2);
-        System.out.printf("Скалярное произведение вектора v1 на вектор v2 равно: %s%n", v5.toString(v5));
+        double v5 = Vector.multiplyVectors(v1, v2);
+        System.out.printf("Скалярное произведение вектора v1 на вектор v2 равно: %s%n", v5);
     }
 }
