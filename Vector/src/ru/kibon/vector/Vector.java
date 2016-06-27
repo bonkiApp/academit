@@ -26,11 +26,12 @@ public class Vector implements Cloneable {
         System.arraycopy(components, 0, this.components, 0, Math.min(dimension, components.length));
     }
 
-    public String toString(Vector vector) {
+    @Override
+    public String toString() {
         DecimalFormat df = new DecimalFormat("#.##");
         StringBuilder builder = new StringBuilder();
         builder.append("{ ");
-        for (double el : vector.components) {
+        for (double el : this.components) {
             builder.append(df.format(el));
             builder.append(", ");
         }
@@ -126,12 +127,12 @@ public class Vector implements Cloneable {
         return result;
     }
 
-    public static Vector summationVectors(Vector v1, Vector v2) {
+    public static Vector sumVectors(Vector v1, Vector v2) {
         Vector newV1 = new Vector(v1);
         return newV1.sumVectors(v2);
     }
 
-    public static Vector subsVectors(Vector v1, Vector v2) {
+    public static Vector subtractVectors(Vector v1, Vector v2) {
         Vector newV1 = new Vector(v1);
         return newV1.subtractVectors(v2);
     }
