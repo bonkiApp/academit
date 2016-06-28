@@ -49,7 +49,7 @@ public class Vector implements Cloneable {
     }
 
     public Vector sumVectors(Vector vector2) {
-        this.components = compareVectors(this, vector2.components.length);
+        resizeVectors(this, vector2.components.length);
         for (int i = 0; i < vector2.components.length; i++) {
             this.components[i] = this.components[i] + vector2.components[i];
         }
@@ -57,21 +57,20 @@ public class Vector implements Cloneable {
     }
 
     public Vector subtractVectors(Vector vector2) {
-        this.components = compareVectors(this, vector2.components.length);
+        resizeVectors(this, vector2.components.length);
         for (int i = 0; i < vector2.components.length; i++) {
             this.components[i] = this.components[i] - vector2.components[i];
         }
         return this;
     }
 
-    private static double[] compareVectors(Vector v1, int length) {
+    private static void resizeVectors(Vector v1, int length) {
         if (v1.components.length >= length) {
-            return v1.components;
+            return;
         } else {
             double[] newV = new double[length];
             System.arraycopy(v1.components, 0, newV, 0, v1.components.length);
             v1.components = newV;
-            return v1.components;
         }
     }
 
@@ -142,7 +141,8 @@ public class Vector implements Cloneable {
 
     public static double multiplyVectors(Vector v1, Vector v2) {
         double result = 0;
-        for (int i = 0; i < Math.min(v1.components.length, v2.components.length); i++) {
+        int length = Math.min(v1.components.length, v2.components.length);
+        for (int i = 0; i < length; i++) {
             result += v1.components[i] * v2.components[i];
         }
         return result;
