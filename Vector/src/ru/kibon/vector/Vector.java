@@ -65,9 +65,7 @@ public class Vector implements Cloneable {
     }
 
     private static void resizeVectors(Vector v1, int length) {
-        if (v1.components.length >= length) {
-            return;
-        } else {
+        if (v1.components.length < length) {
             double[] newV = new double[length];
             System.arraycopy(v1.components, 0, newV, 0, v1.components.length);
             v1.components = newV;
