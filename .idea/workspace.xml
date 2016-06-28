@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ba4ac7e-8c08-495f-ae2e-7c90f46eef61" name="Default" comment="">
+    <list default="true" id="9ba4ac7e-8c08-495f-ae2e-7c90f46eef61" name="Default" comment=" самые последние исправления">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="academit.iws" />
@@ -25,36 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vector/src/ru/kibon/vector/Main.java">
+      <file leaf-file-name="Matrix.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Matrix/src/ru/kibon/matrix/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormaterEX.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ForTest/src/FormaterEX.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#863#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vector.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vector/src/ru/kibon/vector/Vector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.819797">
-              <caret line="149" column="13" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +70,7 @@
         <option value="$PROJECT_DIR$/ForTest/src/FormaterEX.java" />
         <option value="$PROJECT_DIR$/Vector/src/ru/kibon/vector/Main.java" />
         <option value="$PROJECT_DIR$/Vector/src/ru/kibon/vector/Vector.java" />
+        <option value="$PROJECT_DIR$/Matrix/src/Matrix.java" />
       </list>
     </option>
   </component>
@@ -143,9 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,15 +128,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="academit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="academit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/Scan/src" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/Matrix/src" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -547,60 +552,6 @@
       <workItem from="1465223021937" duration="4307000" />
       <workItem from="1465396433125" duration="1262000" />
     </task>
-    <task id="LOCAL-00012" summary="исправления">
-      <created>1465227679796</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1465227679796</updated>
-    </task>
-    <task id="LOCAL-00013" summary="добавлен writer">
-      <created>1465229462218</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1465229462218</updated>
-    </task>
-    <task id="LOCAL-00014" summary="0">
-      <created>1465229489062</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1465229489062</updated>
-    </task>
-    <task id="LOCAL-00015" summary="работа  над вектором">
-      <created>1465489270640</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1465489270640</updated>
-    </task>
-    <task id="LOCAL-00016" summary="вектор toString">
-      <created>1465491764609</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1465491764609</updated>
-    </task>
-    <task id="LOCAL-00017" summary="toString">
-      <created>1465558932421</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1465558932421</updated>
-    </task>
-    <task id="LOCAL-00018" summary="main">
-      <created>1465559048140</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1465559048140</updated>
-    </task>
-    <task id="LOCAL-00019" summary="toString">
-      <created>1465560056500</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1465560056500</updated>
-    </task>
-    <task id="LOCAL-00020" summary="стринги">
-      <created>1465624989875</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1465624989875</updated>
-    </task>
     <task id="LOCAL-00021" summary="Стринги">
       <created>1466237139234</created>
       <option name="number" value="00021" />
@@ -841,7 +792,61 @@
       <option name="project" value="LOCAL" />
       <updated>1467039680468</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="0">
+      <created>1467039768468</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1467039768468</updated>
+    </task>
+    <task id="LOCAL-00062" summary="и еще исправления">
+      <created>1467046601515</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1467046601531</updated>
+    </task>
+    <task id="LOCAL-00063" summary="возможно, последние исправления">
+      <created>1467122003281</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1467122003281</updated>
+    </task>
+    <task id="LOCAL-00064" summary="возможно, последние исправления">
+      <created>1467122115484</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1467122115484</updated>
+    </task>
+    <task id="LOCAL-00065" summary=" самые последние исправления">
+      <created>1467125266203</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1467125266203</updated>
+    </task>
+    <task id="LOCAL-00066" summary=" самые последние исправления">
+      <created>1467128976468</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1467128976468</updated>
+    </task>
+    <task id="LOCAL-00067" summary=" самые последние исправления">
+      <created>1467129587265</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1467129587265</updated>
+    </task>
+    <task id="LOCAL-00068" summary="класс Matrix">
+      <created>1467132119968</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1467132119968</updated>
+    </task>
+    <task id="LOCAL-00069" summary="matrix">
+      <created>1467132148125</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1467132148125</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -857,7 +862,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30116472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29783693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -915,17 +920,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Стринги" />
-    <MESSAGE value="конструктор копии" />
-    <MESSAGE value="вестор с массивом" />
-    <MESSAGE value="исключение в вектор с массивом" />
-    <MESSAGE value="исключение для вектора с массивом" />
     <MESSAGE value="болванки методов" />
     <MESSAGE value="сложение векторов" />
     <MESSAGE value="вектор" />
     <MESSAGE value="сумма и разность векторов" />
     <MESSAGE value="переделал сумму и разность векторов" />
-    <MESSAGE value="0" />
     <MESSAGE value="умножение на скаляр и разворот вектора" />
     <MESSAGE value="округление до 2х знаков в toString" />
     <MESSAGE value="получить и установить компонент вектора по индексу" />
@@ -940,7 +939,13 @@
     <MESSAGE value="ужас то какой..." />
     <MESSAGE value="исправление ошибок, конструктор dim,arr" />
     <MESSAGE value="исправление ошибок" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправление ошибок" />
+    <MESSAGE value="0" />
+    <MESSAGE value="и еще исправления" />
+    <MESSAGE value="возможно, последние исправления" />
+    <MESSAGE value=" самые последние исправления" />
+    <MESSAGE value="класс Matrix" />
+    <MESSAGE value="matrix" />
+    <option name="LAST_COMMIT_MESSAGE" value="matrix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -953,13 +958,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Generic/src/ru/kibon/generic/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vector/src/ru/kibon/vector/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1323,18 +1321,26 @@
     <entry file="file://$PROJECT_DIR$/Vector/src/ru/kibon/vector/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vector/src/ru/kibon/vector/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.819797">
-          <caret line="149" column="13" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Matrix/src/ru/kibon/matrix/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
