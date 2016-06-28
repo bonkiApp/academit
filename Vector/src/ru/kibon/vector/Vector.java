@@ -49,7 +49,7 @@ public class Vector implements Cloneable {
     }
 
     public Vector sumVectors(Vector vector2) {
-        resizeVectors(this, vector2.components.length);
+        resizeVector(this, vector2.components.length);
         for (int i = 0; i < vector2.components.length; i++) {
             this.components[i] = this.components[i] + vector2.components[i];
         }
@@ -57,14 +57,14 @@ public class Vector implements Cloneable {
     }
 
     public Vector subtractVectors(Vector vector2) {
-        resizeVectors(this, vector2.components.length);
+        resizeVector(this, vector2.components.length);
         for (int i = 0; i < vector2.components.length; i++) {
             this.components[i] = this.components[i] - vector2.components[i];
         }
         return this;
     }
 
-    private static void resizeVectors(Vector v1, int length) {
+    private static void resizeVector(Vector v1, int length) {
         if (v1.components.length < length) {
             double[] newV = new double[length];
             System.arraycopy(v1.components, 0, newV, 0, v1.components.length);
