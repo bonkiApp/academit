@@ -49,11 +49,7 @@ public class Vector implements Cloneable {
     }
 
     public Vector sumVectors(Vector vector2) {
-        if (this.components.length < vector2.components.length) {
-            double[] newV = new double[vector2.components.length];
-            System.arraycopy(this.components, 0, newV, 0, this.components.length);
-            this.components = newV;
-        }
+        this.components = compareVectors(this, vector2.components.length);
         for (int i = 0; i < vector2.components.length; i++) {
             this.components[i] = this.components[i] + vector2.components[i];
         }
@@ -61,15 +57,22 @@ public class Vector implements Cloneable {
     }
 
     public Vector subtractVectors(Vector vector2) {
-        if (this.components.length < vector2.components.length) {
-            double[] newV = new double[vector2.components.length];
-            System.arraycopy(this.components, 0, newV, 0, this.components.length);
-            this.components = newV;
-        }
+        this.components = compareVectors(this, vector2.components.length);
         for (int i = 0; i < vector2.components.length; i++) {
             this.components[i] = this.components[i] - vector2.components[i];
         }
         return this;
+    }
+
+    private static double[] compareVectors(Vector v1, int length) {
+        if (v1.components.length >= length) {
+            return v1.components;
+        } else {
+            double[] newV = new double[length];
+            System.arraycopy(v1.components, 0, newV, 0, v1.components.length);
+            v1.components = newV;
+            return v1.components;
+        }
     }
 
     public Vector multipleVector(double scalar) {
@@ -138,21 +141,9 @@ public class Vector implements Cloneable {
     }
 
     public static double multiplyVectors(Vector v1, Vector v2) {
-        Vector newV1 = new Vector(v1);
-        Vector newV2 = new Vector(v2);
-        if (newV1.components.length != newV2.components.length) {
-            double[] newComponent = new double[Math.max(newV1.components.length, newV2.components.length)];
-            if (newV1.components.length < newV2.components.length) {
-                System.arraycopy(newV1.components, 0, newComponent, 0, newV1.components.length);
-                newV1.components = newComponent;
-            } else {
-                System.arraycopy(newV2.components, 0, newComponent, 0, newV2.components.length);
-                newV2.components = newComponent;
-            }
-        }
         double result = 0;
-        for (int i = 0; i < newV1.components.length; i++) {
-            result += newV1.components[i] * newV2.components[i];
+        for (int i = 0; i < Math.min(v1.components.length, v2.components.length); i++) {
+            result += v1.components[i] * v2.components[i];
         }
         return result;
     }
