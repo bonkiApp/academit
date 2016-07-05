@@ -4,7 +4,17 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 
 public class Vector implements Cloneable {
+
+
     private double[] components;
+
+    public double[] getComponents() {
+        return components;
+    }
+
+    public void setComponents(double[] components) {
+        this.components = components;
+     }
 
     public Vector(int dimension) {
         if (dimension <= 0) {
