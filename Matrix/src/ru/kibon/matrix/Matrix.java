@@ -13,12 +13,16 @@ public class Matrix {
     }
 
     public Matrix(Matrix other) {
-        this.rows = other.rows;
-        System.arraycopy(other.rows, 0, this.rows, 0, other.rows.length);
+//        this.rows = new Vector[other.rows.length];
+        for (int i = 0; i < other.rows.length; i++) {
+            this.rows[i].setComponents(other.rows[i].getComponents());
+            System.arraycopy(other.rows[i].getComponents(), 0, this.rows[i].setComponents(other.rows[i].getComponents()), 0, other.rows[i].getComponents().length);
+        }
     }
 
     public Matrix(double[][] array) {
-        for (int i = 0; i < array.length; i++){
+        Vector[] rows = new Vector[array.length];
+        for (int i = 0; i < array.length; i++) {
             rows[i] = new Vector(array[i].length, array[i]);
         }
     }
