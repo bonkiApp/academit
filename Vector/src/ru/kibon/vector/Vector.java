@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Vector implements Cloneable {
 
 
-    private double[] components;
+    public double[] components;
 
     public double[] getComponents() {
         return components;
