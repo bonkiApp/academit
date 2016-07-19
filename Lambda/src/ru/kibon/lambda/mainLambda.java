@@ -17,7 +17,7 @@ public class mainLambda {
         persons.add(new Person("Дуся", 10));
 
         String disNames = persons.stream()
-                .map(n -> n.getName())
+                .map(Person::getName)
                 .distinct()
                 .collect(Collectors.joining(", ", "Имена: ", "."));
         System.out.println(disNames);
@@ -25,7 +25,7 @@ public class mainLambda {
         System.out.print("Средний возраст людей младше 18 лет: ");
         persons.stream()
                 .filter(p -> p.getAge() < 18)
-                .mapToInt(x -> x.getAge())
+                .mapToInt(Person::getAge)
                 .average()
                 .ifPresent(System.out::println);
 
@@ -40,7 +40,7 @@ public class mainLambda {
         persons.stream()
                 .filter(p -> p.getAge() > 20 && p.getAge() < 45)
                 .sorted((Person p1, Person p2) -> p2.getAge() - p1.getAge())
-                .map(n -> n.getName())
+                .map(Person::getName)
                 .forEach(System.out::println);
     }
 }
