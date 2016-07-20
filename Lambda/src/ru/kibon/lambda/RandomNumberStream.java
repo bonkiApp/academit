@@ -1,9 +1,10 @@
+//Генератор корней из случайных чисел
 package ru.kibon.lambda;
 
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-public class NumberStream {
+public class RandomNumberStream {
     public static void main(String[] args) {
         System.out.println("Введите количество элементов для вычисления корней.");
         Scanner scanner = new Scanner(System.in);
