@@ -1,6 +1,5 @@
 package ru.kibon.lambda;
 
-import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -11,17 +10,12 @@ public class NumberStream {
         int n;
         if (scanner.hasNextInt()) {
             n = scanner.nextInt();
-            Stream.generate(new Random()::nextDouble)
+            Stream.generate(Math::random)
                     .limit(n)
-                    .map(Math::sqrt)
+                    .map(x -> Math.sqrt(x * 1000))
                     .forEach(System.out::println);
-        }
-        else{
+        } else {
             System.out.println("Вы ввели не целое число.");
         }
-
-
     }
-
-
 }
