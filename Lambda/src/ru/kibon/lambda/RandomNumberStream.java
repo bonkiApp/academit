@@ -8,9 +8,8 @@ public class RandomNumberStream {
     public static void main(String[] args) {
         System.out.println("Введите количество элементов для вычисления корней.");
         Scanner scanner = new Scanner(System.in);
-        int n;
         if (scanner.hasNextInt()) {
-            n = scanner.nextInt();
+            int n = scanner.nextInt();
             Stream.generate(Math::random)
                     .limit(n)
                     .map(x -> Math.sqrt(x * 1000))
