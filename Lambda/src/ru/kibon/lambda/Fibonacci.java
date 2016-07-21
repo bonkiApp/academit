@@ -10,11 +10,15 @@ public class Fibonacci {
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextInt()) {
             int n = scanner.nextInt();
-            Stream.iterate(new long[]{0, 1}, x -> new long[]{x[1], x[0] + x[1]})
-                    .limit(n)
-                    .forEach(x -> System.out.println(x[0]));
+            if (n < 0) {
+                System.out.println("Число должно быть положительным");
+            } else {
+                Stream.iterate(new long[]{0, 1}, x -> new long[]{x[1], x[0] + x[1]})
+                        .limit(n)
+                        .forEach(x -> System.out.println(x[0]));
+            }
         } else {
-            System.out.println("Вы ввели не положительное целое число.");
+            System.out.println("Вы ввели не целое число.");
         }
 
     }
