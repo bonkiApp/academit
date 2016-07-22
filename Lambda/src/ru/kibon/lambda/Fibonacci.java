@@ -13,7 +13,7 @@ public class Fibonacci {
             if (n < 0) {
                 System.out.println("Число должно быть положительным");
             } else {
-                Stream.iterate(new long[]{0, 1}, x -> new long[]{x[1], x[0] + x[1]})
+                Stream.iterate(new BigInteger[]{ new BigInteger("0"), new BigInteger("1")}, x -> new BigInteger[] { x[1], x[0].add(x[1]) })
                         .limit(n)
                         .forEach(x -> System.out.println(x[0]));
             }
